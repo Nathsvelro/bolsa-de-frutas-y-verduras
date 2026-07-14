@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-surface-950: #05070a;
+  --color-surface-900: #0a0e15;
+  --color-surface-850: #0e131c;
+  --color-surface-800: #121826;
+  --color-surface-700: #1a2233;
+  --color-surface-600: #26314a;
+
+  --color-bull-300: #6ee7b7;
+  --color-bull-400: #34d399;
+  --color-bull-500: #10b981;
+  --color-bull-600: #059669;
+
+  --color-bear-300: #fca5a5;
+  --color-bear-400: #f87171;
+  --color-bear-500: #ef4444;
+  --color-bear-600: #dc2626;
+
+  --color-gold-300: #fde68a;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+
+  --animate-pulse-live: pulse-live 1.8s ease-in-out infinite;
+  --animate-flash-up: flash-up 1s ease-out;
+  --animate-flash-down: flash-down 1s ease-out;
+  --animate-ticker: ticker 32s linear infinite;
+  --animate-rise: rise 0.4s ease-out;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-surface-950 text-slate-100 font-sans antialiased m-0;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(16, 185, 129, 0.08), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 0%, rgba(239, 68, 68, 0.06), transparent);
+    background-attachment: fixed;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-surface-900);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-surface-600);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-surface-700);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface-850/80 border border-white/[0.06] backdrop-blur-xl;
+  }
+
+  .ticker-num {
+    @apply font-mono tabular-nums;
+  }
+}
+
+@keyframes pulse-live {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
+  }
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes flash-up {
+  0% { background-color: rgba(16, 185, 129, 0.35); }
+  100% { background-color: transparent; }
+}
+
+@keyframes flash-down {
+  0% { background-color: rgba(239, 68, 68, 0.35); }
+  100% { background-color: transparent; }
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
