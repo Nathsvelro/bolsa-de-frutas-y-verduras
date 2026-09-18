@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { AlertTriangle, RefreshCw } from "lucide-react";
+import { AlertTriangle, ArrowRight, BarChart3, Newspaper, Radio, RefreshCw } from "lucide-react";
 import { usePriceData } from "./hooks/usePriceData";
 import { getMarketStats } from "./data/priceUtils";
 import { formatMXN, formatPercent, formatShortDateEsMX, formatDateRangeEsMX } from "./utils/format";
@@ -14,6 +14,7 @@ import PriceLineChart from "./components/PriceLineChart";
 import PriceHeatmap from "./components/PriceHeatmap";
 import TrendChart from "./components/TrendChart";
 import SavingsOpportunities from "./components/SavingsOpportunities";
+import NewsRadar from "./components/NewsRadar";
 
 const NOTIFICATION_THRESHOLD = 4.5;
 const MAX_NOTIFICATIONS = 4;
@@ -105,6 +106,9 @@ export default function App() {
   const { products, locations, sources, loading, error, reload } = usePriceData();
 
   const [search, setSearch] = useState("");
+  const [section, setSection] = useState('mercado');
+  const [newsProductId, setNewsProductId] = useState('');
+  const marketRef = useRef(null);
   const [category, setCategory] = useState("todos");
   const [sortBy, setSortBy] = useState("nombre");
   const [view, setView] = useState("tabla");
@@ -159,6 +163,27 @@ export default function App() {
   );
   const displayProduct = selectedProduct || marketStats.biggestMover;
 
+  const openNews = useCallback((productId = '') => {
+    setNewsProductId(productId);
+    setSection('noticias');
+    window.scrollTo({ top: 0 });
+    requestAnimationFrame(() => document.getElementById('news-heading')?.focus({ preventScroll: true }));
+  }, []);
+
+  const viewProductFromNews = useCallback((id) => {
+    const product = products.find((item) => item.id === id);
+    if (!product) return;
+    setSelectedProductId(id);
+    setSearch(product.name);
+    setCategory('todos');
+    setView('tabla');
+    setSection('mercado');
+    requestAnimationFrame(() => {
+      marketRef.current?.scrollIntoView({ block: 'start' });
+      marketRef.current?.focus({ preventScroll: true });
+    });
+  }, [products]);
+
   const handleShare = useCallback(async () => {
     const top = marketStats.opportunities[0];
     const lines = ["📊 Bolsa de Verduras · CDMX"];
@@ -168,7 +193,7 @@ export default function App() {
     }
     if (top) {
       lines.push(
-        `Mayor ahorro hoy: ${top.product.name} — ahorra ${formatMXN(top.savingsAbs)} (${formatPercent(
+        `Mayor ahorro en el periodo disponible: ${top.product.name} — diferencia de ${formatMXN(top.savingsAbs)} (${formatPercent(
           top.savingsPct,
           { signed: false }
         )}) comprando en ${top.best.name} en vez de ${top.worst.name}`
@@ -203,25 +228,54 @@ export default function App() {
       <PriceNotifications notifications={notifications} onDismiss={dismissNotification} />
 
       <main className="max-w-7xl mx-auto px-3 sm:px-6 py-6 space-y-6">
-        {error ? (
+        <nav aria-label="Secciones del tablero" className="flex items-center justify-between gap-3 border-b border-white/[0.06] pb-4">
+          <div className="flex gap-1 rounded-xl border border-white/5 bg-surface-900 p-1">
+            <button type="button" aria-pressed={section === 'mercado'} onClick={() => setSection('mercado')}
+              className={`news-control flex items-center gap-2 rounded-lg px-3 py-2.5 text-xs font-medium transition-colors sm:px-4 sm:text-sm ${section === 'mercado' ? 'bg-surface-700 text-white' : 'text-slate-400 hover:text-slate-200'}`}>
+              <BarChart3 size={16} aria-hidden="true" />Precios
+            </button>
+            <button type="button" aria-pressed={section === 'noticias'} onClick={() => openNews()}
+              className={`news-control flex items-center gap-2 rounded-lg px-3 py-2.5 text-xs font-medium transition-colors sm:px-4 sm:text-sm ${section === 'noticias' ? 'bg-surface-700 text-white' : 'text-slate-400 hover:text-slate-200'}`}>
+              <Newspaper size={16} aria-hidden="true" />Noticias y contexto
+            </button>
+          </div>
+          <span className="hidden text-xs text-slate-500 sm:block">Tu mercado, con perspectiva.</span>
+        </nav>
+
+        {section === 'noticias' ? (
+          <NewsRadar key={newsProductId} products={products} initialProductId={newsProductId} onViewProduct={viewProductFromNews} />
+        ) : error ? (
           <ErrorState onRetry={reload} />
         ) : loading && !products.length ? (
           <LoadingSkeleton />
         ) : (
           <>
             <StatsBar products={products} locations={locations} sources={sources} />
-            <HighlightCards products={products} locations={locations} />
+            <HighlightCards products={products} locations={locations} sources={sources} />
 
-            <SearchFilterBar
-              search={search}
-              onSearchChange={setSearch}
-              category={category}
-              onCategoryChange={setCategory}
-              sortBy={sortBy}
-              onSortChange={setSortBy}
-              view={view}
-              onViewChange={setView}
-            />
+            <button type="button" onClick={() => openNews()}
+              className="news-control group flex w-full items-center gap-4 rounded-2xl border border-bull-500/15 bg-bull-500/5 p-4 text-left transition-colors hover:border-bull-400/35 sm:px-5">
+              <span className="rounded-xl border border-bull-400/15 bg-bull-400/10 p-2.5 text-bull-300"><Radio size={21} aria-hidden="true" /></span>
+              <span className="min-w-0 flex-1"><span className="block text-sm font-semibold text-slate-200">¿Qué puede mover los precios?</span><span className="mt-1 block text-xs leading-relaxed text-slate-400">Clima, cosechas y transporte. Explora las noticias detrás de tu canasta.</span></span>
+              <span className="flex shrink-0 items-center gap-2 text-xs font-medium text-bull-300"><span className="hidden sm:inline">Explorar radar</span><ArrowRight size={17} aria-hidden="true" className="transition-transform group-hover:translate-x-1" /></span>
+            </button>
+
+            <div ref={marketRef} tabIndex={-1} className="scroll-mt-32 space-y-4 rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-bull-400" aria-label="Comparador de precios">
+              <SearchFilterBar
+                search={search}
+                onSearchChange={setSearch}
+                category={category}
+                onCategoryChange={setCategory}
+                sortBy={sortBy}
+                onSortChange={setSortBy}
+                view={view}
+                onViewChange={setView}
+              />
+              {selectedProduct && <div className="flex flex-wrap items-center justify-between gap-2 px-1 text-xs">
+                <p className="text-slate-400">Producto seleccionado: <span className="text-slate-200">{selectedProduct.icon} {selectedProduct.name}</span></p>
+                <button type="button" onClick={() => openNews(selectedProduct.id)} className="news-control flex items-center gap-1.5 rounded text-bull-300"><Newspaper size={13} aria-hidden="true" />Ver noticias de {selectedProduct.name}<ArrowRight size={13} aria-hidden="true" /></button>
+              </div>}
+            </div>
 
             <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 items-start">
               <div className="xl:col-span-2 space-y-4">
@@ -258,7 +312,7 @@ export default function App() {
 
               <div className="space-y-6">
                 {view === "tabla" && <PriceLineChart product={displayProduct} locations={locations} />}
-                <SavingsOpportunities products={products} locations={locations} />
+                <SavingsOpportunities products={products} locations={locations} sources={sources} />
               </div>
             </div>
 

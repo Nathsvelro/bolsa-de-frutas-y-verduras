@@ -1,4 +1,4 @@
-name: Actualizar precios
+name: Actualizar precios y noticias
 
 # Ver docs/datos.md para el contrato completo del pipeline de datos.
 #
@@ -82,6 +82,11 @@ jobs:
         continue-on-error: true
         run: npm run datos:profeco
 
+      - name: Noticias del mercado
+        id: noticias
+        continue-on-error: true
+        run: npm run datos:noticias
+
       - name: Reconstruir precios.json
         id: build
         if: always()
@@ -103,7 +108,7 @@ jobs:
               } catch {}
               const sniimFecha = precios.sources?.sniim?.dataDate ?? "sin datos";
               const profecoPeriodo = precios.sources?.profeco?.period ?? "sin datos";
-              console.log(`datos: SNIIM ${sniimFecha} · PROFECO ${profecoPeriodo}`);
+              console.log(`datos: SNIIM ${sniimFecha} · PROFECO ${profecoPeriodo} · noticias`);
             ')
             git add data public/data
             git commit -m "$MENSAJE"
@@ -113,8 +118,14 @@ jobs:
             echo "Sin cambios en data/ ni public/data/; no se hace commit."
           fi
 
-      - name: Fallar el job si algún paso de datos falló
+      # Google Noticias bloquea a veces las IPs de GitHub Actions; eso no debe
+      # pintar en rojo la corrida de precios. Se conserva noticias.json anterior.
+      - name: Avisar si fallaron las noticias
+        if: steps.noticias.outcome == 'failure'
+        run: echo "::warning::No se pudieron actualizar las noticias (ver el paso 'Noticias del mercado'); se conserva noticias.json anterior."
+
+      - name: Fallar el job si algún paso de precios falló
         if: steps.sniim.outcome == 'failure' || steps.profeco.outcome == 'failure' || steps.build.outcome == 'failure'
         run: |
-          echo "::error::Uno o más pasos de datos fallaron (ver arriba). precios.json quedó con el último dato válido disponible."
+          echo "::error::Uno o más pasos de precios fallaron (ver arriba). Se conserva el último dato válido de cada fuente que falló."
           exit 1

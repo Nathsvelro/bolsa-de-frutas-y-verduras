@@ -1,6 +1,6 @@
 # Datos reales: fuentes, pipeline y formato de `precios.json`
 
-La app ya no simula precios. Un pipeline (scripts en `scripts/`, ejecutados por GitHub Actions) descarga datos públicos, los normaliza con el catálogo de `scripts/catalogo.mjs` y escribe `public/data/precios.json`, que es lo único que la app lee (`fetch('/data/precios.json')`).
+La app ya no simula precios. Un pipeline (scripts en `scripts/`, ejecutados por GitHub Actions) descarga datos públicos, los normaliza con el catálogo de `scripts/catalogo.mjs` y escribe `public/data/precios.json`, la fuente de precios que lee la app. El radar de noticias carga por separado `public/data/noticias.json`; su contrato y actualización se describen en [noticias.md](noticias.md).
 
 ## Fuentes
 
@@ -28,7 +28,7 @@ data/profeco.json          salida de fetch-profeco: último periodo y periodo an
 public/data/precios.json   lo que consume la app (build-precios une lo anterior con el catálogo)
 ```
 
-Cada script es Node ≥ 20 sin dependencias npm (usa `fetch`, `fs`, `zlib`, `child_process` para `unzip -p`). Si una fuente falla, el script sale con código ≠ 0 **sin** sobrescribir su archivo previo; `build-precios` siempre puede reconstruir `precios.json` con lo último disponible y refleja la fecha real del dato, no la de ejecución.
+Cada script es Node ≥ 22 (la versión que usa el workflow y que exige Vite 8) sin dependencias npm (usa `fetch`, `fs`, `zlib`, `child_process` para `unzip -p`). Si una fuente falla, el script sale con código ≠ 0 **sin** sobrescribir su archivo previo; `build-precios` siempre puede reconstruir `precios.json` con lo último disponible y refleja la fecha real del dato, no la de ejecución.
 
 Variables de entorno útiles en local: `PROFECO_ZIP=/ruta/QQP_2026.zip` evita descargar el ZIP; `SNIIM_HTML=/ruta/archivo.html` evita la consulta HTTP.
 

@@ -1,13 +1,16 @@
 import { motion } from 'framer-motion';
 import { TrendingDown, TrendingUp } from 'lucide-react';
 import { getBestLocation, getMarketStats, getRetailLocations } from '../data/priceUtils';
-import { formatMXN, formatPercent } from '../utils/format';
+import { formatMXN, formatPercent, formatDateRangeEsMX } from '../utils/format';
 
-export default function HighlightCards({ products, locations }) {
+export default function HighlightCards({ products, locations, sources }) {
   const stats = getMarketStats(products, locations);
   const retailLocations = getRetailLocations(locations);
   const cheapest = stats.cheapest;
   const mostExpensive = stats.mostExpensive;
+  const menudeoPeriod = sources?.profeco?.dataDateFrom && sources?.profeco?.dataDate
+    ? `Menudeo · ${formatDateRangeEsMX(sources.profeco.dataDateFrom, sources.profeco.dataDate)}`
+    : 'Menudeo · periodo sin fecha';
 
   if (!cheapest || !mostExpensive) {
     return (
@@ -36,10 +39,11 @@ export default function HighlightCards({ products, locations }) {
         <div className="relative">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold uppercase tracking-wider text-bull-400">
-              Mas Barato Hoy
+              Más barato
             </span>
             <TrendingDown className="h-5 w-5 text-bull-400" />
           </div>
+          <p className="mt-1 text-xs text-slate-400">{menudeoPeriod}</p>
           <div className="mt-3 flex items-center gap-3">
             <span className="text-4xl">{cheapest.icon}</span>
             <div>
@@ -80,10 +84,11 @@ export default function HighlightCards({ products, locations }) {
         <div className="relative">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold uppercase tracking-wider text-bear-400">
-              Mas Caro Hoy
+              Más caro
             </span>
             <TrendingUp className="h-5 w-5 text-bear-400" />
           </div>
+          <p className="mt-1 text-xs text-slate-400">{menudeoPeriod}</p>
           <div className="mt-3 flex items-center gap-3">
             <span className="text-4xl">{mostExpensive.icon}</span>
             <div>

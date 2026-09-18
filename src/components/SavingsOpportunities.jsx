@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
 import { PiggyBank } from 'lucide-react';
 import { getSavingsOpportunities } from '../data/priceUtils';
-import { formatMXN, formatPercent } from '../utils/format';
+import { formatMXN, formatPercent, formatDateRangeEsMX } from '../utils/format';
 
-export default function SavingsOpportunities({ products, locations }) {
+export default function SavingsOpportunities({ products, locations, sources }) {
   const opportunities = getSavingsOpportunities(products, locations).slice(0, 5);
+  const menudeoPeriod = sources?.profeco?.dataDateFrom && sources?.profeco?.dataDate
+    ? `Menudeo · ${formatDateRangeEsMX(sources.profeco.dataDateFrom, sources.profeco.dataDate)}`
+    : 'Menudeo · periodo sin fecha';
 
   if (!opportunities.length) {
     return (
@@ -29,7 +32,8 @@ export default function SavingsOpportunities({ products, locations }) {
         </h2>
       </div>
       <p className="text-slate-400 text-xs mb-4">
-        La mayor diferencia de precio entre lugares, hoy
+        La mayor diferencia de precio entre lugares
+        <span className="block mt-1">{menudeoPeriod}</span>
       </p>
 
       <div className="space-y-2 sm:space-y-3">

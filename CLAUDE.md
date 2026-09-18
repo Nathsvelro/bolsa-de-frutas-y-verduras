@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 "Bolsa de Verduras": dashboard tipo bolsa de valores que compara precios de frutas y verduras en 8 puntos de venta de la Ciudad de México (7 de menudeo + Central de Abastos al mayoreo). SPA en React 19 + Vite 8, sin backend propio. Toda la UI y los comentarios están en español (es-MX); los precios se formatean como MXN.
 
-Los precios son **reales**: un pipeline en `scripts/` (ver `docs/datos.md`) descarga SNIIM (mayoreo) y PROFECO "Quién es Quién en los Precios" (menudeo), y genera `public/data/precios.json`, que es lo único que la app lee.
+Los precios son **reales**: un pipeline en `scripts/` (ver `docs/datos.md`) descarga SNIIM (mayoreo) y PROFECO "Quién es Quién en los Precios" (menudeo), y genera `public/data/precios.json`. La sección "Noticias y contexto" lee aparte `public/data/noticias.json` (titulares RSS de Google Noticias clasificados por factor; ver `docs/noticias.md`). La app solo lee esos dos JSON estáticos.
 
 ## Comandos
 
@@ -19,9 +19,10 @@ npm run lint         # oxlint (plugins react + oxc; rules-of-hooks es error)
 npm run datos:sniim    # descarga/normaliza SNIIM -> data/sniim.json, data/sniim-historial.json
 npm run datos:profeco  # descarga/normaliza PROFECO -> data/profeco.json
 npm run datos:build    # une catálogo + data/*.json -> public/data/precios.json
-npm run datos           # los tres anteriores en orden
+npm run datos           # los tres anteriores en orden (no incluye noticias)
+npm run datos:noticias  # RSS de Google Noticias -> public/data/noticias.json (NOTICIAS_RSS=archivo.xml para no usar red)
 
-npm test              # node --test scripts/ (pruebas del pipeline, sin red)
+npm test              # node --test scripts/*.test.mjs (pipeline y utilidades de noticias, sin red)
 ```
 
 Despliegue: el repo está en GitHub (`Nathsvelro/bolsa-de-verduras`) pensado para Vercel, que detecta Vite sin configuración extra. Un workflow de GitHub Actions (`.github/workflows/actualizar-precios.yml`) corre el pipeline y hace commit de los datos nuevos.
@@ -50,6 +51,10 @@ Forma de cada producto que consumen los componentes (JSON + derivados del hook):
 ```
 
 Cualquier lugar del catálogo puede venir en `null` (sin dato comparable o sin observaciones esa quincena); los componentes deben tratarlo como "—" / "s/d", nunca como 0.
+
+### Noticias
+
+`App` alterna entre dos secciones (`'mercado' | 'noticias'`); `NewsRadar` se monta solo en la segunda y se remonta con `key={newsProductId}` cuando se llega desde "Ver noticias de {producto}". `src/hooks/useNewsData.js` descarga `noticias.json` y lo cachea a nivel de módulo (un remontaje no vuelve a descargar; "Reintentar" sí). `src/data/newsUtils.js` valida el contrato en el cliente (`parseNewsData` rechaza enlaces no HTTP, fechas futuras y categorías desconocidas) y filtra; sus pruebas viven en `scripts/news-ui.test.mjs` porque son módulos puros. La clasificación por titular (`scripts/lib/noticias.mjs`) es orientativa y la UI lo dice: el `context` de cada nota es un mecanismo posible, no un pronóstico.
 
 ### Convención de colores (no intuitiva)
 

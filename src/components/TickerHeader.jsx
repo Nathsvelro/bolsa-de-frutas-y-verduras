@@ -33,7 +33,7 @@ export default function TickerHeader({ products, sources, onShare }) {
         </div>
 
         <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
-          <div className="flex items-center gap-1.5 rounded-full border border-white/5 bg-surface-800/70 px-2 py-1 sm:px-3 sm:py-1.5">
+          <div className="hidden items-center gap-1.5 rounded-full border border-white/5 bg-surface-800/70 px-2 py-1 sm:flex sm:px-3 sm:py-1.5">
             <span className="h-2 w-2 rounded-full bg-bull-500" />
             <span className="text-[10px] font-semibold tracking-wide text-slate-200 sm:text-xs">
               DATOS REALES
@@ -53,6 +53,7 @@ export default function TickerHeader({ products, sources, onShare }) {
 
           <motion.button
             type="button"
+            aria-label="Compartir comparación de precios"
             onClick={onShare}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
