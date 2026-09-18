@@ -14,19 +14,48 @@ export function formatPercent(value, { signed = true } = {}) {
   return `${sign}${value.toFixed(2)}%`;
 }
 
-export function formatRelativeTime(timestamp) {
-  if (!timestamp) return "sin datos";
-  const diffMs = Date.now() - timestamp;
-  const diffSec = Math.round(diffMs / 1000);
-  if (diffSec < 5) return "justo ahora";
-  if (diffSec < 60) return `hace ${diffSec}s`;
-  const diffMin = Math.round(diffSec / 60);
-  if (diffMin < 60) return `hace ${diffMin} min`;
-  const diffHr = Math.round(diffMin / 60);
-  return `hace ${diffHr} h`;
+// Convierte "AAAA-MM-DD" a Date en horario LOCAL (no UTC), para no restar un
+// día al formatear fechas que vienen de precios.json.
+export function parseLocalDate(dateStr) {
+  if (!dateStr || typeof dateStr !== "string") return null;
+  const [y, m, d] = dateStr.split("-").map(Number);
+  if (!y || !m || !d) return null;
+  return new Date(y, m - 1, d);
 }
 
-export function formatClock(timestamp) {
-  if (!timestamp) return "--:--:--";
-  return new Date(timestamp).toLocaleTimeString("es-MX", { hour12: false });
+const fullDateFormatter = new Intl.DateTimeFormat("es-MX", {
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+});
+
+const shortDateFormatter = new Intl.DateTimeFormat("es-MX", {
+  day: "numeric",
+  month: "short",
+});
+
+// "AAAA-MM-DD" -> "17 sep 2026"
+export function formatShortDateEsMX(dateStr) {
+  const date = parseLocalDate(dateStr);
+  if (!date) return "s/f";
+  return fullDateFormatter.format(date);
+}
+
+// "AAAA-MM-DD" -> "3 sep" (sin año, para ejes de gráfica)
+export function formatDayMonthEsMX(dateStr) {
+  const date = parseLocalDate(dateStr);
+  if (!date) return "";
+  return shortDateFormatter.format(date);
+}
+
+// Rango de dos "AAAA-MM-DD" -> "16–31 jul 2026" (o con ambos meses si difieren)
+export function formatDateRangeEsMX(fromStr, toStr) {
+  const from = parseLocalDate(fromStr);
+  const to = parseLocalDate(toStr);
+  if (!from || !to) return "s/f";
+  const sameMonth = from.getMonth() === to.getMonth() && from.getFullYear() === to.getFullYear();
+  if (sameMonth) {
+    return `${from.getDate()}–${fullDateFormatter.format(to)}`;
+  }
+  return `${shortDateFormatter.format(from)} – ${fullDateFormatter.format(to)}`;
 }

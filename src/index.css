@@ -70,6 +70,22 @@
   .ticker-num {
     @apply font-mono tabular-nums;
   }
+
+  .news-control:focus-visible {
+    outline: 2px solid var(--color-bull-400);
+    outline-offset: 4px;
+  }
+
+  .news-hero {
+    background: radial-gradient(ellipse at 100% 50%, rgb(16 185 129 / 0.10), transparent 60%),
+      linear-gradient(120deg, #101b20, #0c141b 65%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ticker, .animate-pulse, .animate-flash-up, .animate-flash-down {
+    animation: none;
+  }
 }
 
 @keyframes pulse-live {

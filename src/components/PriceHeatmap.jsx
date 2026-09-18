@@ -1,5 +1,4 @@
 import { useMemo } from 'react';
-import { LOCATIONS } from '../data/mockData';
 import { formatMXN } from '../utils/format';
 
 function cellColor(t) {
@@ -10,25 +9,28 @@ function cellColor(t) {
   return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
 
-function shortLocationName(name) {
-  return name.split(' ')[0].slice(0, 5);
+function shortLocationName(loc) {
+  return loc.short || loc.name.split(' ')[0].slice(0, 5);
 }
 
-export default function PriceHeatmap({ products }) {
+export default function PriceHeatmap({ products, locations }) {
   const rows = useMemo(() => {
     return (products || []).map((product) => {
-      const values = Object.values(product.prices);
-      const min = Math.min(...values);
-      const max = Math.max(...values);
-      const range = max - min || 1;
-      const cells = LOCATIONS.map((loc) => {
+      const values = (locations || [])
+        .map((loc) => product.prices[loc.id])
+        .filter((v) => typeof v === 'number');
+      const min = values.length ? Math.min(...values) : null;
+      const max = values.length ? Math.max(...values) : null;
+      const range = min !== null && max !== null ? max - min || 1 : 1;
+      const cells = (locations || []).map((loc) => {
         const price = product.prices[loc.id];
-        const t = (price - min) / range;
-        return { locationId: loc.id, price, t, isBest: price === min };
+        const hasPrice = typeof price === 'number';
+        const t = hasPrice && min !== null ? (price - min) / range : 0;
+        return { locationId: loc.id, price: hasPrice ? price : null, t, isBest: hasPrice && price === min };
       });
       return { product, cells };
     });
-  }, [products]);
+  }, [products, locations]);
 
   return (
     <div className="glass-card rounded-2xl p-4 sm:p-6 shadow-lg shadow-black/20">
@@ -46,13 +48,13 @@ export default function PriceHeatmap({ products }) {
               <th className="sticky left-0 bg-surface-850/95 backdrop-blur z-10 text-left text-[11px] sm:text-xs text-slate-400 font-sans font-normal pr-2 pb-1 whitespace-nowrap">
                 Producto
               </th>
-              {LOCATIONS.map((loc) => (
+              {(locations || []).map((loc) => (
                 <th
                   key={loc.id}
                   title={loc.name}
                   className="text-[10px] sm:text-xs text-slate-400 font-sans font-normal pb-1 px-1 min-w-[52px] sm:min-w-[72px] truncate"
                 >
-                  <div className="truncate">{shortLocationName(loc.name)}</div>
+                  <div className="truncate">{shortLocationName(loc)}</div>
                   <div className="text-[9px] sm:text-[10px] text-slate-500 truncate">
                     {loc.tag}
                   </div>
@@ -72,13 +74,13 @@ export default function PriceHeatmap({ products }) {
                   {cells.map((cell) => (
                     <td
                       key={cell.locationId}
-                      title={`${formatMXN(cell.price)} / kg`}
-                      style={{ backgroundColor: cellColor(cell.t) }}
+                      title={cell.price !== null ? formatMXN(cell.price) : 'Sin dato'}
+                      style={cell.price !== null ? { backgroundColor: cellColor(cell.t) } : undefined}
                       className={`rounded-lg text-center text-xs sm:text-sm py-1.5 px-1 ticker-num transition-colors duration-500 ${
-                        cell.isBest ? 'ring-1 ring-gold-500/50' : ''
-                      }`}
+                        cell.price === null ? 'bg-surface-800/70 text-slate-600' : ''
+                      } ${cell.isBest ? 'ring-1 ring-gold-500/50' : ''}`}
                     >
-                      {formatMXN(cell.price)}
+                      {cell.price !== null ? formatMXN(cell.price) : '—'}
                     </td>
                   ))}
                 </tr>

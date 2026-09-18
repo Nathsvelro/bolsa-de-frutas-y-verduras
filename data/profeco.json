@@ -1,0 +1,2305 @@
+{
+  "fetchedAt": "2026-09-17T23:56:14.379Z",
+  "zipUrl": "https://datos.profeco.gob.mx/datos_abiertos/file.php?t=9d62040eae6dcc63e36b8ac821427647",
+  "period": "07-2026_Q2",
+  "previousPeriod": "07-2026_Q1",
+  "dataDate": "2026-07-31",
+  "dataDateFrom": "2026-07-16",
+  "products": {
+    "jitomate": {
+      "la_comer": {
+        "price": 25.4,
+        "min": 16.9,
+        "max": 25.9,
+        "n": 10,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje"
+      },
+      "walmart_express": {
+        "price": 16,
+        "min": 15,
+        "max": 22,
+        "n": 31,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje"
+      },
+      "bodega_aurrera": {
+        "price": 15,
+        "min": 15,
+        "max": 25,
+        "n": 23,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje"
+      },
+      "soriana": {
+        "price": 19.9,
+        "min": 11.5,
+        "max": 34.9,
+        "n": 39,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje"
+      },
+      "walmart": {
+        "price": 16,
+        "min": 16,
+        "max": 21,
+        "n": 27,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje"
+      },
+      "mercado_publico": {
+        "price": 25,
+        "min": 16,
+        "max": 40,
+        "n": 9,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje"
+      },
+      "chedraui": {
+        "price": 17,
+        "min": 11.5,
+        "max": 19,
+        "n": 7,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje"
+      }
+    },
+    "cebolla": {
+      "la_comer": {
+        "price": 32.9,
+        "min": 30.9,
+        "max": 34.9,
+        "n": 10,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Blanca Sin Rabo"
+      },
+      "walmart_express": {
+        "price": 42,
+        "min": 42,
+        "max": 42,
+        "n": 29,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Blanca Sin Rabo"
+      },
+      "bodega_aurrera": {
+        "price": 42,
+        "min": 20,
+        "max": 42,
+        "n": 22,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Blanca Sin Rabo"
+      },
+      "soriana": {
+        "price": 29.9,
+        "min": 21.8,
+        "max": 41.9,
+        "n": 39,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Blanca Sin Rabo"
+      },
+      "walmart": {
+        "price": 42,
+        "min": 34,
+        "max": 42,
+        "n": 25,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Blanca Sin Rabo"
+      },
+      "mercado_publico": {
+        "price": 28,
+        "min": 18,
+        "max": 38,
+        "n": 9,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Blanca Sin Rabo"
+      },
+      "chedraui": {
+        "price": 26.5,
+        "min": 16.9,
+        "max": 28,
+        "n": 6,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Blanca Sin Rabo"
+      }
+    },
+    "lechuga": {
+      "la_comer": {
+        "price": 25.9,
+        "min": 22.9,
+        "max": 39.9,
+        "n": 7,
+        "date": "2026-07-31",
+        "presentation": "Pieza. Romana"
+      },
+      "walmart_express": {
+        "price": 24.9,
+        "min": 24,
+        "max": 24.9,
+        "n": 25,
+        "date": "2026-07-31",
+        "presentation": "Pieza. Romana"
+      },
+      "bodega_aurrera": {
+        "price": 22,
+        "min": 22,
+        "max": 24.9,
+        "n": 19,
+        "date": "2026-07-31",
+        "presentation": "Pieza. Romana"
+      },
+      "soriana": {
+        "price": 22.9,
+        "min": 16.9,
+        "max": 25.9,
+        "n": 36,
+        "date": "2026-07-31",
+        "presentation": "Pieza. Romana"
+      },
+      "walmart": {
+        "price": 24.9,
+        "min": 16,
+        "max": 25,
+        "n": 25,
+        "date": "2026-07-30",
+        "presentation": "Pieza. Romana"
+      },
+      "mercado_publico": {
+        "price": 20,
+        "min": 15,
+        "max": 25,
+        "n": 6,
+        "date": "2026-07-31",
+        "presentation": "Pieza. Romana"
+      },
+      "chedraui": {
+        "price": 22,
+        "min": 22,
+        "max": 22.5,
+        "n": 6,
+        "date": "2026-07-30",
+        "presentation": "Pieza. Romana"
+      }
+    },
+    "papa": {
+      "la_comer": {
+        "price": 52.9,
+        "min": 50.9,
+        "max": 52.9,
+        "n": 10,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Alfa/blanca"
+      },
+      "walmart_express": {
+        "price": 66,
+        "min": 59,
+        "max": 66,
+        "n": 30,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Alfa/blanca"
+      },
+      "bodega_aurrera": {
+        "price": 65,
+        "min": 30,
+        "max": 65,
+        "n": 21,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Alfa/blanca"
+      },
+      "soriana": {
+        "price": 46.9,
+        "min": 39.8,
+        "max": 46.9,
+        "n": 38,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Alfa/blanca"
+      },
+      "walmart": {
+        "price": 66,
+        "min": 59,
+        "max": 66,
+        "n": 22,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Alfa/blanca"
+      },
+      "mercado_publico": {
+        "price": 45,
+        "min": 25,
+        "max": 60,
+        "n": 9,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Alfa/blanca"
+      },
+      "chedraui": {
+        "price": 50,
+        "min": 49,
+        "max": 52,
+        "n": 7,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Alfa/blanca"
+      }
+    },
+    "cilantro": {
+      "la_comer": {
+        "price": 10.9,
+        "min": 10.9,
+        "max": 10.9,
+        "n": 7,
+        "date": "2026-07-31",
+        "presentation": "Manojo"
+      },
+      "bodega_aurrera": {
+        "price": 10,
+        "min": 7,
+        "max": 10.5,
+        "n": 22,
+        "date": "2026-07-31",
+        "presentation": "Manojo"
+      },
+      "soriana": {
+        "price": 9.9,
+        "min": 6.8,
+        "max": 13.5,
+        "n": 37,
+        "date": "2026-07-31",
+        "presentation": "Manojo"
+      },
+      "walmart_express": {
+        "price": 10,
+        "min": 10,
+        "max": 12.9,
+        "n": 18,
+        "date": "2026-07-31",
+        "presentation": "Manojo"
+      },
+      "walmart": {
+        "price": 10,
+        "min": 9,
+        "max": 14.9,
+        "n": 23,
+        "date": "2026-07-30",
+        "presentation": "Manojo"
+      },
+      "mercado_publico": {
+        "price": 5,
+        "min": 5,
+        "max": 15,
+        "n": 7,
+        "date": "2026-07-31",
+        "presentation": "Manojo"
+      },
+      "chedraui": {
+        "price": 9.5,
+        "min": 6.9,
+        "max": 9.9,
+        "n": 7,
+        "date": "2026-07-30",
+        "presentation": "Manojo"
+      }
+    },
+    "chile_serrano": {
+      "la_comer": {
+        "price": 49.9,
+        "min": 49.9,
+        "max": 59.9,
+        "n": 10,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Serrano"
+      },
+      "walmart_express": {
+        "price": 59,
+        "min": 59,
+        "max": 59,
+        "n": 26,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Serrano"
+      },
+      "bodega_aurrera": {
+        "price": 54,
+        "min": 54,
+        "max": 54,
+        "n": 19,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Serrano"
+      },
+      "soriana": {
+        "price": 52,
+        "min": 34.8,
+        "max": 66,
+        "n": 37,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Serrano"
+      },
+      "walmart": {
+        "price": 59,
+        "min": 59,
+        "max": 59,
+        "n": 24,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Serrano"
+      },
+      "mercado_publico": {
+        "price": 45,
+        "min": 30,
+        "max": 60,
+        "n": 9,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Serrano"
+      },
+      "chedraui": {
+        "price": 44.5,
+        "min": 39.9,
+        "max": 49.9,
+        "n": 7,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Serrano"
+      }
+    },
+    "chile_jalapeno": {
+      "la_comer": {
+        "price": 5.7,
+        "min": 5.7,
+        "max": 5.7,
+        "n": 10,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño"
+      },
+      "walmart_express": {
+        "price": 25,
+        "min": 25,
+        "max": 25,
+        "n": 30,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño"
+      },
+      "bodega_aurrera": {
+        "price": 20,
+        "min": 20,
+        "max": 25,
+        "n": 22,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño"
+      },
+      "soriana": {
+        "price": 25.9,
+        "min": 24.7,
+        "max": 29.9,
+        "n": 41,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño"
+      },
+      "walmart": {
+        "price": 25,
+        "min": 25,
+        "max": 25,
+        "n": 26,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño"
+      },
+      "mercado_publico": {
+        "price": 35,
+        "min": 20,
+        "max": 60,
+        "n": 8,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño"
+      },
+      "chedraui": {
+        "price": 19,
+        "min": 17,
+        "max": 19,
+        "n": 7,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño"
+      }
+    },
+    "zanahoria": {
+      "la_comer": {
+        "price": 18.9,
+        "min": 18,
+        "max": 18.9,
+        "n": 10,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Mediana"
+      },
+      "walmart_express": {
+        "price": 18,
+        "min": 18,
+        "max": 18,
+        "n": 28,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Mediana"
+      },
+      "bodega_aurrera": {
+        "price": 15.5,
+        "min": 13,
+        "max": 15.5,
+        "n": 22,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Mediana"
+      },
+      "soriana": {
+        "price": 16.9,
+        "min": 12.8,
+        "max": 17.5,
+        "n": 40,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Mediana"
+      },
+      "walmart": {
+        "price": 18,
+        "min": 14,
+        "max": 18,
+        "n": 26,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Mediana"
+      },
+      "mercado_publico": {
+        "price": 20,
+        "min": 15,
+        "max": 25,
+        "n": 9,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Mediana"
+      },
+      "chedraui": {
+        "price": 15.5,
+        "min": 12.9,
+        "max": 16,
+        "n": 7,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Mediana"
+      }
+    },
+    "pepino": {
+      "la_comer": {
+        "price": 36.9,
+        "min": 34.9,
+        "max": 36.9,
+        "n": 10,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel"
+      },
+      "walmart_express": {
+        "price": 24,
+        "min": 18,
+        "max": 24,
+        "n": 28,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel"
+      },
+      "bodega_aurrera": {
+        "price": 22,
+        "min": 20,
+        "max": 22,
+        "n": 21,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel"
+      },
+      "soriana": {
+        "price": 23.9,
+        "min": 19.8,
+        "max": 34.9,
+        "n": 35,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel"
+      },
+      "walmart": {
+        "price": 24,
+        "min": 24,
+        "max": 24,
+        "n": 24,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel"
+      },
+      "mercado_publico": {
+        "price": 30,
+        "min": 20,
+        "max": 40,
+        "n": 8,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel"
+      },
+      "chedraui": {
+        "price": 26,
+        "min": 22,
+        "max": 29,
+        "n": 7,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel"
+      }
+    },
+    "calabacita": {
+      "la_comer": {
+        "price": 34.9,
+        "min": 34.9,
+        "max": 39.9,
+        "n": 9,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)"
+      },
+      "walmart_express": {
+        "price": 36.9,
+        "min": 36.9,
+        "max": 36.9,
+        "n": 27,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)"
+      },
+      "bodega_aurrera": {
+        "price": 34.9,
+        "min": 34.9,
+        "max": 34.9,
+        "n": 15,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)"
+      },
+      "soriana": {
+        "price": 36.9,
+        "min": 26.8,
+        "max": 39.9,
+        "n": 32,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)"
+      },
+      "walmart": {
+        "price": 36.9,
+        "min": 36.9,
+        "max": 39.5,
+        "n": 20,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)"
+      },
+      "mercado_publico": {
+        "price": 25,
+        "min": 20,
+        "max": 40,
+        "n": 9,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)"
+      },
+      "chedraui": {
+        "price": 32.5,
+        "min": 26.9,
+        "max": 34,
+        "n": 7,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)"
+      }
+    },
+    "brocoli": {
+      "la_comer": {
+        "price": 41.4,
+        "min": 38.9,
+        "max": 42.9,
+        "n": 8,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel"
+      },
+      "walmart_express": {
+        "price": 64,
+        "min": 40,
+        "max": 64,
+        "n": 29,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel"
+      },
+      "bodega_aurrera": {
+        "price": 62,
+        "min": 40,
+        "max": 62,
+        "n": 20,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel"
+      },
+      "soriana": {
+        "price": 64,
+        "min": 38,
+        "max": 66,
+        "n": 32,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel"
+      },
+      "walmart": {
+        "price": 64,
+        "min": 40,
+        "max": 64,
+        "n": 26,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel"
+      },
+      "mercado_publico": {
+        "price": 32.5,
+        "min": 25,
+        "max": 60,
+        "n": 8,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel"
+      },
+      "chedraui": {
+        "price": 39.9,
+        "min": 29.5,
+        "max": 39.9,
+        "n": 6,
+        "date": "2026-07-29",
+        "presentation": "1 Kg. Granel"
+      }
+    },
+    "elote": {
+      "la_comer": {
+        "price": 10.9,
+        "min": 10.9,
+        "max": 10.9,
+        "n": 7,
+        "date": "2026-07-31",
+        "presentation": "Pieza"
+      },
+      "walmart_express": {
+        "price": 15.9,
+        "min": 15.9,
+        "max": 15.9,
+        "n": 21,
+        "date": "2026-07-31",
+        "presentation": "Pieza"
+      },
+      "bodega_aurrera": {
+        "price": 13.9,
+        "min": 13.9,
+        "max": 13.9,
+        "n": 12,
+        "date": "2026-07-31",
+        "presentation": "Pieza"
+      },
+      "soriana": {
+        "price": 13.9,
+        "min": 11.8,
+        "max": 14.9,
+        "n": 32,
+        "date": "2026-07-31",
+        "presentation": "Pieza"
+      },
+      "walmart": {
+        "price": 14.9,
+        "min": 14.5,
+        "max": 15.9,
+        "n": 18,
+        "date": "2026-07-30",
+        "presentation": "Pieza"
+      },
+      "mercado_publico": {
+        "price": 15,
+        "min": 10,
+        "max": 15,
+        "n": 6,
+        "date": "2026-07-31",
+        "presentation": "Pieza"
+      },
+      "chedraui": {
+        "price": 8.5,
+        "min": 8.5,
+        "max": 12.9,
+        "n": 5,
+        "date": "2026-07-29",
+        "presentation": "Pieza"
+      }
+    },
+    "aguacate": {
+      "la_comer": {
+        "price": 98.5,
+        "min": 79.9,
+        "max": 98.5,
+        "n": 8,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Hass"
+      },
+      "walmart_express": {
+        "price": 64,
+        "min": 64,
+        "max": 65,
+        "n": 31,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Hass"
+      },
+      "bodega_aurrera": {
+        "price": 59,
+        "min": 59,
+        "max": 59,
+        "n": 21,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Hass"
+      },
+      "soriana": {
+        "price": 59.9,
+        "min": 42.8,
+        "max": 74.9,
+        "n": 39,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Hass"
+      },
+      "walmart": {
+        "price": 62,
+        "min": 62,
+        "max": 68,
+        "n": 24,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Hass"
+      },
+      "mercado_publico": {
+        "price": 73,
+        "min": 60,
+        "max": 110,
+        "n": 8,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Hass"
+      },
+      "chedraui": {
+        "price": 59,
+        "min": 39.5,
+        "max": 69,
+        "n": 7,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Hass"
+      }
+    },
+    "limon": {
+      "la_comer": {
+        "price": 49.9,
+        "min": 49.9,
+        "max": 49.9,
+        "n": 9,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Agrio con Semilla o Colima"
+      },
+      "walmart_express": {
+        "price": 40,
+        "min": 38,
+        "max": 40,
+        "n": 30,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Agrio con Semilla o Colima"
+      },
+      "bodega_aurrera": {
+        "price": 35,
+        "min": 20,
+        "max": 40,
+        "n": 22,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Agrio con Semilla o Colima"
+      },
+      "soriana": {
+        "price": 32,
+        "min": 27.8,
+        "max": 39.9,
+        "n": 39,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Agrio con Semilla o Colima"
+      },
+      "walmart": {
+        "price": 40,
+        "min": 35,
+        "max": 42,
+        "n": 27,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Agrio con Semilla o Colima"
+      },
+      "mercado_publico": {
+        "price": 30,
+        "min": 20,
+        "max": 50,
+        "n": 10,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Agrio con Semilla o Colima"
+      },
+      "chedraui": {
+        "price": 35.45,
+        "min": 22,
+        "max": 39.9,
+        "n": 6,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Agrio con Semilla o Colima"
+      }
+    },
+    "manzana": {
+      "la_comer": {
+        "price": 39.9,
+        "min": 39.9,
+        "max": 39.9,
+        "n": 10,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana"
+      },
+      "walmart_express": {
+        "price": 39,
+        "min": 34,
+        "max": 39,
+        "n": 31,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana"
+      },
+      "bodega_aurrera": {
+        "price": 38,
+        "min": 38,
+        "max": 39,
+        "n": 23,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana"
+      },
+      "soriana": {
+        "price": 37.3,
+        "min": 29.8,
+        "max": 45.9,
+        "n": 40,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana"
+      },
+      "walmart": {
+        "price": 39,
+        "min": 30,
+        "max": 39,
+        "n": 27,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana"
+      },
+      "mercado_publico": {
+        "price": 55,
+        "min": 40,
+        "max": 65,
+        "n": 9,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana"
+      },
+      "chedraui": {
+        "price": 38,
+        "min": 34.5,
+        "max": 42,
+        "n": 7,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana"
+      }
+    },
+    "platano": {
+      "la_comer": {
+        "price": 26.9,
+        "min": 25.9,
+        "max": 26.9,
+        "n": 10,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón"
+      },
+      "walmart_express": {
+        "price": 24,
+        "min": 20,
+        "max": 26,
+        "n": 30,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón"
+      },
+      "bodega_aurrera": {
+        "price": 23,
+        "min": 10,
+        "max": 23,
+        "n": 21,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón"
+      },
+      "soriana": {
+        "price": 23.9,
+        "min": 9.8,
+        "max": 25.9,
+        "n": 39,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón"
+      },
+      "walmart": {
+        "price": 24,
+        "min": 20,
+        "max": 24,
+        "n": 24,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón"
+      },
+      "mercado_publico": {
+        "price": 24,
+        "min": 17,
+        "max": 30,
+        "n": 9,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón"
+      },
+      "chedraui": {
+        "price": 19,
+        "min": 16.5,
+        "max": 19,
+        "n": 7,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón"
+      }
+    },
+    "naranja": {
+      "la_comer": {
+        "price": 39.9,
+        "min": 39.9,
+        "max": 41.9,
+        "n": 9,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Valencia"
+      },
+      "walmart_express": {
+        "price": 42,
+        "min": 34,
+        "max": 42,
+        "n": 24,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Valencia"
+      },
+      "bodega_aurrera": {
+        "price": 40,
+        "min": 25,
+        "max": 40,
+        "n": 18,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Valencia"
+      },
+      "soriana": {
+        "price": 32.8,
+        "min": 32.8,
+        "max": 43.5,
+        "n": 3,
+        "date": "2026-07-27",
+        "presentation": "1 Kg. Granel. Valencia"
+      },
+      "walmart": {
+        "price": 42,
+        "min": 29,
+        "max": 42,
+        "n": 12,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Valencia"
+      },
+      "mercado_publico": {
+        "price": 25,
+        "min": 25,
+        "max": 25,
+        "n": 2,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Valencia"
+      }
+    },
+    "mango": {
+      "la_comer": {
+        "price": 49.9,
+        "min": 49.9,
+        "max": 59.9,
+        "n": 5,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Ataulfo"
+      },
+      "walmart_express": {
+        "price": 42,
+        "min": 34,
+        "max": 45,
+        "n": 30,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Ataulfo"
+      },
+      "bodega_aurrera": {
+        "price": 40,
+        "min": 29,
+        "max": 42,
+        "n": 19,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Ataulfo"
+      },
+      "soriana": {
+        "price": 43.5,
+        "min": 34.9,
+        "max": 50.9,
+        "n": 34,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Ataulfo"
+      },
+      "walmart": {
+        "price": 42,
+        "min": 30,
+        "max": 44,
+        "n": 22,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Ataulfo"
+      },
+      "mercado_publico": {
+        "price": 37.5,
+        "min": 25,
+        "max": 50,
+        "n": 8,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Ataulfo"
+      },
+      "chedraui": {
+        "price": 47.95,
+        "min": 29.9,
+        "max": 49.9,
+        "n": 6,
+        "date": "2026-07-29",
+        "presentation": "1 Kg. Granel. Ataulfo"
+      }
+    },
+    "fresa": {
+      "la_comer": {
+        "price": 175.99118942731278,
+        "min": 151.98237885462552,
+        "max": 175.99118942731278,
+        "n": 6,
+        "date": "2026-07-31",
+        "presentation": "Paquete o Canastilla 454 Gr."
+      },
+      "walmart_express": {
+        "price": 171.80616740088104,
+        "min": 171.80616740088104,
+        "max": 171.80616740088104,
+        "n": 26,
+        "date": "2026-07-31",
+        "presentation": "Paquete o Canastilla 454 Gr."
+      },
+      "bodega_aurrera": {
+        "price": 162.99559471365637,
+        "min": 92.51101321585902,
+        "max": 162.99559471365637,
+        "n": 12,
+        "date": "2026-07-31",
+        "presentation": "Paquete o Canastilla 454 Gr."
+      },
+      "soriana": {
+        "price": 178.19383259911893,
+        "min": 109.69162995594712,
+        "max": 184.80176211453744,
+        "n": 20,
+        "date": "2026-07-31",
+        "presentation": "Paquete o Canastilla 454 Gr."
+      },
+      "walmart": {
+        "price": 171.80616740088104,
+        "min": 171.80616740088104,
+        "max": 171.80616740088104,
+        "n": 19,
+        "date": "2026-07-30",
+        "presentation": "Paquete o Canastilla 454 Gr."
+      },
+      "mercado_publico": {
+        "price": 154.1850220264317,
+        "min": 99.11894273127753,
+        "max": 154.1850220264317,
+        "n": 6,
+        "date": "2026-07-31",
+        "presentation": "Paquete o Canastilla 454 Gr."
+      },
+      "chedraui": {
+        "price": 131.9383259911894,
+        "min": 131.9383259911894,
+        "max": 151.98237885462552,
+        "n": 3,
+        "date": "2026-07-29",
+        "presentation": "Paquete o Canastilla 454 Gr."
+      }
+    },
+    "uva": {
+      "la_comer": {
+        "price": 139,
+        "min": 79.9,
+        "max": 149,
+        "n": 9,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Thompson. Blanca Sin Semilla"
+      },
+      "soriana": {
+        "price": 89.8,
+        "min": 49.9,
+        "max": 125,
+        "n": 56,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Thompson. Blanca Sin Semilla"
+      },
+      "mercado_publico": {
+        "price": 100,
+        "min": 75,
+        "max": 120,
+        "n": 8,
+        "date": "2026-07-31",
+        "presentation": "1 Kg. Granel. Thompson. Blanca Sin Semilla"
+      },
+      "chedraui": {
+        "price": 99.45,
+        "min": 69,
+        "max": 99.9,
+        "n": 8,
+        "date": "2026-07-29",
+        "presentation": "1 Kg. Granel. Thompson. Blanca Sin Semilla"
+      },
+      "bodega_aurrera": {
+        "price": 69,
+        "min": 44,
+        "max": 97,
+        "n": 3,
+        "date": "2026-07-30",
+        "presentation": "1 Kg. Granel. Roja Sin Semilla"
+      }
+    }
+  },
+  "previous": {
+    "period": "07-2026_Q1",
+    "dataDate": "2026-07-15",
+    "dataDateFrom": "2026-07-01",
+    "products": {
+      "jitomate": {
+        "bodega_aurrera": {
+          "price": 20,
+          "min": 15,
+          "max": 25,
+          "n": 20,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje"
+        },
+        "la_comer": {
+          "price": 26.9,
+          "min": 25.9,
+          "max": 29.9,
+          "n": 7,
+          "date": "2026-07-13",
+          "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje"
+        },
+        "soriana": {
+          "price": 21,
+          "min": 12.5,
+          "max": 34.9,
+          "n": 43,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje"
+        },
+        "walmart_express": {
+          "price": 21,
+          "min": 16,
+          "max": 26,
+          "n": 25,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje"
+        },
+        "mercado_publico": {
+          "price": 22.5,
+          "min": 14,
+          "max": 36,
+          "n": 10,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje"
+        },
+        "walmart": {
+          "price": 21,
+          "min": 16,
+          "max": 26,
+          "n": 23,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje"
+        },
+        "chedraui": {
+          "price": 14.5,
+          "min": 12.5,
+          "max": 19,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje"
+        }
+      },
+      "cebolla": {
+        "bodega_aurrera": {
+          "price": 42,
+          "min": 15,
+          "max": 42,
+          "n": 20,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Blanca Sin Rabo"
+        },
+        "la_comer": {
+          "price": 34.9,
+          "min": 32.9,
+          "max": 34.9,
+          "n": 7,
+          "date": "2026-07-13",
+          "presentation": "1 Kg. Granel. Blanca Sin Rabo"
+        },
+        "soriana": {
+          "price": 34.9,
+          "min": 19.8,
+          "max": 37.9,
+          "n": 44,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Blanca Sin Rabo"
+        },
+        "walmart_express": {
+          "price": 42,
+          "min": 26,
+          "max": 42,
+          "n": 26,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Blanca Sin Rabo"
+        },
+        "mercado_publico": {
+          "price": 21,
+          "min": 16,
+          "max": 32,
+          "n": 10,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Blanca Sin Rabo"
+        },
+        "walmart": {
+          "price": 42,
+          "min": 34,
+          "max": 42,
+          "n": 23,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Blanca Sin Rabo"
+        },
+        "chedraui": {
+          "price": 25.5,
+          "min": 24,
+          "max": 26,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Blanca Sin Rabo"
+        }
+      },
+      "lechuga": {
+        "bodega_aurrera": {
+          "price": 22,
+          "min": 22,
+          "max": 24.9,
+          "n": 15,
+          "date": "2026-07-15",
+          "presentation": "Pieza. Romana"
+        },
+        "la_comer": {
+          "price": 25.905,
+          "min": 24.9,
+          "max": 26.9,
+          "n": 6,
+          "date": "2026-07-10",
+          "presentation": "Pieza. Romana"
+        },
+        "soriana": {
+          "price": 21.8,
+          "min": 15,
+          "max": 29.8,
+          "n": 35,
+          "date": "2026-07-15",
+          "presentation": "Pieza. Romana"
+        },
+        "walmart_express": {
+          "price": 24.9,
+          "min": 24.9,
+          "max": 24.9,
+          "n": 24,
+          "date": "2026-07-15",
+          "presentation": "Pieza. Romana"
+        },
+        "walmart": {
+          "price": 24.9,
+          "min": 24.9,
+          "max": 24.9,
+          "n": 19,
+          "date": "2026-07-15",
+          "presentation": "Pieza. Romana"
+        },
+        "mercado_publico": {
+          "price": 25,
+          "min": 15,
+          "max": 35,
+          "n": 7,
+          "date": "2026-07-15",
+          "presentation": "Pieza. Romana"
+        },
+        "chedraui": {
+          "price": 23,
+          "min": 22,
+          "max": 25.8,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "Pieza. Romana"
+        }
+      },
+      "papa": {
+        "bodega_aurrera": {
+          "price": 65,
+          "min": 30,
+          "max": 65,
+          "n": 16,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Alfa/blanca"
+        },
+        "la_comer": {
+          "price": 49.9,
+          "min": 45.9,
+          "max": 52.9,
+          "n": 7,
+          "date": "2026-07-13",
+          "presentation": "1 Kg. Granel. Alfa/blanca"
+        },
+        "soriana": {
+          "price": 46.9,
+          "min": 39.9,
+          "max": 65.9,
+          "n": 44,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Alfa/blanca"
+        },
+        "walmart_express": {
+          "price": 66,
+          "min": 59,
+          "max": 66,
+          "n": 23,
+          "date": "2026-07-14",
+          "presentation": "1 Kg. Granel. Alfa/blanca"
+        },
+        "mercado_publico": {
+          "price": 45,
+          "min": 35,
+          "max": 60,
+          "n": 9,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Alfa/blanca"
+        },
+        "walmart": {
+          "price": 66,
+          "min": 47,
+          "max": 66,
+          "n": 21,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Alfa/blanca"
+        },
+        "chedraui": {
+          "price": 49,
+          "min": 49,
+          "max": 50,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Alfa/blanca"
+        }
+      },
+      "cilantro": {
+        "bodega_aurrera": {
+          "price": 9.9,
+          "min": 7,
+          "max": 10,
+          "n": 18,
+          "date": "2026-07-15",
+          "presentation": "Manojo"
+        },
+        "la_comer": {
+          "price": 10.9,
+          "min": 7.9,
+          "max": 10.9,
+          "n": 6,
+          "date": "2026-07-10",
+          "presentation": "Manojo"
+        },
+        "soriana": {
+          "price": 10.9,
+          "min": 8.9,
+          "max": 12.9,
+          "n": 38,
+          "date": "2026-07-15",
+          "presentation": "Manojo"
+        },
+        "walmart_express": {
+          "price": 10.9,
+          "min": 10,
+          "max": 14.9,
+          "n": 19,
+          "date": "2026-07-15",
+          "presentation": "Manojo"
+        },
+        "walmart": {
+          "price": 10,
+          "min": 9,
+          "max": 12.9,
+          "n": 20,
+          "date": "2026-07-15",
+          "presentation": "Manojo"
+        },
+        "chedraui": {
+          "price": 9.9,
+          "min": 9.5,
+          "max": 9.9,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "Manojo"
+        },
+        "mercado_publico": {
+          "price": 5,
+          "min": 5,
+          "max": 15,
+          "n": 5,
+          "date": "2026-07-15",
+          "presentation": "Manojo"
+        }
+      },
+      "chile_serrano": {
+        "bodega_aurrera": {
+          "price": 54,
+          "min": 54,
+          "max": 54,
+          "n": 17,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Serrano"
+        },
+        "la_comer": {
+          "price": 39.9,
+          "min": 38.9,
+          "max": 49.9,
+          "n": 7,
+          "date": "2026-07-13",
+          "presentation": "1 Kg. Granel. Serrano"
+        },
+        "soriana": {
+          "price": 52,
+          "min": 29.9,
+          "max": 66,
+          "n": 42,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Serrano"
+        },
+        "walmart_express": {
+          "price": 59,
+          "min": 59,
+          "max": 59,
+          "n": 26,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Serrano"
+        },
+        "mercado_publico": {
+          "price": 42.5,
+          "min": 32,
+          "max": 72,
+          "n": 10,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Serrano"
+        },
+        "walmart": {
+          "price": 59,
+          "min": 59,
+          "max": 59,
+          "n": 22,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Serrano"
+        },
+        "chedraui": {
+          "price": 39.9,
+          "min": 36.9,
+          "max": 49.9,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Serrano"
+        }
+      },
+      "chile_jalapeno": {
+        "bodega_aurrera": {
+          "price": 20,
+          "min": 20,
+          "max": 25,
+          "n": 18,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño"
+        },
+        "la_comer": {
+          "price": 5.7,
+          "min": 5.7,
+          "max": 5.7,
+          "n": 6,
+          "date": "2026-07-13",
+          "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño"
+        },
+        "soriana": {
+          "price": 28.8,
+          "min": 21.8,
+          "max": 29.9,
+          "n": 45,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño"
+        },
+        "walmart_express": {
+          "price": 25,
+          "min": 25,
+          "max": 25,
+          "n": 26,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño"
+        },
+        "mercado_publico": {
+          "price": 40,
+          "min": 28,
+          "max": 60,
+          "n": 9,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño"
+        },
+        "walmart": {
+          "price": 25,
+          "min": 25,
+          "max": 25,
+          "n": 22,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño"
+        },
+        "chedraui": {
+          "price": 17,
+          "min": 17,
+          "max": 18,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño"
+        }
+      },
+      "zanahoria": {
+        "bodega_aurrera": {
+          "price": 15.5,
+          "min": 12,
+          "max": 18,
+          "n": 14,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Mediana"
+        },
+        "la_comer": {
+          "price": 16.9,
+          "min": 16.9,
+          "max": 18.9,
+          "n": 7,
+          "date": "2026-07-13",
+          "presentation": "1 Kg. Granel. Mediana"
+        },
+        "soriana": {
+          "price": 17.2,
+          "min": 13.9,
+          "max": 17.5,
+          "n": 42,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Mediana"
+        },
+        "walmart_express": {
+          "price": 18,
+          "min": 18,
+          "max": 18,
+          "n": 22,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Mediana"
+        },
+        "mercado_publico": {
+          "price": 20,
+          "min": 18,
+          "max": 20,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Mediana"
+        },
+        "walmart": {
+          "price": 18,
+          "min": 18,
+          "max": 18,
+          "n": 22,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Mediana"
+        },
+        "chedraui": {
+          "price": 16,
+          "min": 14.5,
+          "max": 16,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Mediana"
+        }
+      },
+      "pepino": {
+        "bodega_aurrera": {
+          "price": 22,
+          "min": 15,
+          "max": 22,
+          "n": 17,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel"
+        },
+        "la_comer": {
+          "price": 26.9,
+          "min": 22.9,
+          "max": 36.9,
+          "n": 7,
+          "date": "2026-07-13",
+          "presentation": "1 Kg. Granel"
+        },
+        "soriana": {
+          "price": 19.8,
+          "min": 12.8,
+          "max": 31.9,
+          "n": 40,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel"
+        },
+        "walmart_express": {
+          "price": 24,
+          "min": 16,
+          "max": 24,
+          "n": 24,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel"
+        },
+        "mercado_publico": {
+          "price": 23.5,
+          "min": 16,
+          "max": 30,
+          "n": 8,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel"
+        },
+        "walmart": {
+          "price": 24,
+          "min": 16,
+          "max": 25,
+          "n": 19,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel"
+        },
+        "chedraui": {
+          "price": 22.5,
+          "min": 20.9,
+          "max": 26,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel"
+        }
+      },
+      "calabacita": {
+        "bodega_aurrera": {
+          "price": 34.9,
+          "min": 34.9,
+          "max": 34.9,
+          "n": 14,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)"
+        },
+        "la_comer": {
+          "price": 38.9,
+          "min": 38.9,
+          "max": 39.9,
+          "n": 7,
+          "date": "2026-07-13",
+          "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)"
+        },
+        "soriana": {
+          "price": 36.9,
+          "min": 29.8,
+          "max": 39.9,
+          "n": 32,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)"
+        },
+        "walmart_express": {
+          "price": 36.9,
+          "min": 30,
+          "max": 36.9,
+          "n": 22,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)"
+        },
+        "mercado_publico": {
+          "price": 27.5,
+          "min": 18,
+          "max": 40,
+          "n": 10,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)"
+        },
+        "walmart": {
+          "price": 36.9,
+          "min": 36.9,
+          "max": 36.9,
+          "n": 19,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)"
+        },
+        "chedraui": {
+          "price": 33.45,
+          "min": 29,
+          "max": 36.5,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)"
+        }
+      },
+      "brocoli": {
+        "bodega_aurrera": {
+          "price": 62,
+          "min": 40,
+          "max": 62,
+          "n": 17,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel"
+        },
+        "la_comer": {
+          "price": 42.9,
+          "min": 38.9,
+          "max": 42.9,
+          "n": 5,
+          "date": "2026-07-13",
+          "presentation": "1 Kg. Granel"
+        },
+        "soriana": {
+          "price": 64,
+          "min": 47.8,
+          "max": 66,
+          "n": 33,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel"
+        },
+        "walmart_express": {
+          "price": 64,
+          "min": 40,
+          "max": 64,
+          "n": 24,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel"
+        },
+        "mercado_publico": {
+          "price": 28,
+          "min": 25,
+          "max": 65,
+          "n": 8,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel"
+        },
+        "walmart": {
+          "price": 64,
+          "min": 64,
+          "max": 64,
+          "n": 20,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel"
+        },
+        "chedraui": {
+          "price": 29.5,
+          "min": 29.5,
+          "max": 39.9,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel"
+        }
+      },
+      "elote": {
+        "bodega_aurrera": {
+          "price": 13.9,
+          "min": 13.9,
+          "max": 13.9,
+          "n": 15,
+          "date": "2026-07-15",
+          "presentation": "Pieza"
+        },
+        "la_comer": {
+          "price": 10.9,
+          "min": 10.9,
+          "max": 11.9,
+          "n": 6,
+          "date": "2026-07-10",
+          "presentation": "Pieza"
+        },
+        "soriana": {
+          "price": 14.9,
+          "min": 11.8,
+          "max": 14.9,
+          "n": 33,
+          "date": "2026-07-15",
+          "presentation": "Pieza"
+        },
+        "walmart_express": {
+          "price": 15.9,
+          "min": 15.9,
+          "max": 15.9,
+          "n": 16,
+          "date": "2026-07-15",
+          "presentation": "Pieza"
+        },
+        "mercado_publico": {
+          "price": 14,
+          "min": 10,
+          "max": 15,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "Pieza"
+        },
+        "walmart": {
+          "price": 14.9,
+          "min": 14.9,
+          "max": 14.9,
+          "n": 11,
+          "date": "2026-07-15",
+          "presentation": "Pieza"
+        },
+        "chedraui": {
+          "price": 10.65,
+          "min": 10.5,
+          "max": 10.8,
+          "n": 2,
+          "date": "2026-07-15",
+          "presentation": "Pieza"
+        }
+      },
+      "aguacate": {
+        "la_comer": {
+          "price": 98.5,
+          "min": 98.5,
+          "max": 98.5,
+          "n": 6,
+          "date": "2026-07-10",
+          "presentation": "1 Kg. Granel. Hass"
+        },
+        "soriana": {
+          "price": 61.9,
+          "min": 42.8,
+          "max": 68.9,
+          "n": 41,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Hass"
+        },
+        "walmart_express": {
+          "price": 64,
+          "min": 64,
+          "max": 64,
+          "n": 25,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Hass"
+        },
+        "mercado_publico": {
+          "price": 80,
+          "min": 55,
+          "max": 96,
+          "n": 9,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Hass"
+        },
+        "bodega_aurrera": {
+          "price": 59,
+          "min": 40,
+          "max": 59,
+          "n": 17,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Hass"
+        },
+        "walmart": {
+          "price": 62,
+          "min": 44,
+          "max": 64,
+          "n": 19,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Hass"
+        },
+        "chedraui": {
+          "price": 60.5,
+          "min": 39.5,
+          "max": 69,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Hass"
+        }
+      },
+      "limon": {
+        "bodega_aurrera": {
+          "price": 29,
+          "min": 15,
+          "max": 35,
+          "n": 17,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Agrio con Semilla o Colima"
+        },
+        "la_comer": {
+          "price": 45.9,
+          "min": 45.9,
+          "max": 49.9,
+          "n": 7,
+          "date": "2026-07-13",
+          "presentation": "1 Kg. Granel. Agrio con Semilla o Colima"
+        },
+        "soriana": {
+          "price": 32,
+          "min": 23.8,
+          "max": 39.9,
+          "n": 43,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Agrio con Semilla o Colima"
+        },
+        "walmart_express": {
+          "price": 40,
+          "min": 40,
+          "max": 45,
+          "n": 26,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Agrio con Semilla o Colima"
+        },
+        "mercado_publico": {
+          "price": 40,
+          "min": 24,
+          "max": 50,
+          "n": 9,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Agrio con Semilla o Colima"
+        },
+        "walmart": {
+          "price": 40,
+          "min": 29,
+          "max": 45,
+          "n": 23,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Agrio con Semilla o Colima"
+        },
+        "chedraui": {
+          "price": 34.9,
+          "min": 34,
+          "max": 39.9,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Agrio con Semilla o Colima"
+        }
+      },
+      "manzana": {
+        "bodega_aurrera": {
+          "price": 38,
+          "min": 38,
+          "max": 39,
+          "n": 19,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana"
+        },
+        "la_comer": {
+          "price": 39.9,
+          "min": 39.9,
+          "max": 39.9,
+          "n": 7,
+          "date": "2026-07-13",
+          "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana"
+        },
+        "soriana": {
+          "price": 38.3,
+          "min": 34.8,
+          "max": 53.9,
+          "n": 42,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana"
+        },
+        "walmart_express": {
+          "price": 39,
+          "min": 39,
+          "max": 39,
+          "n": 23,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana"
+        },
+        "walmart": {
+          "price": 39,
+          "min": 32,
+          "max": 39,
+          "n": 22,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana"
+        },
+        "mercado_publico": {
+          "price": 60,
+          "min": 50,
+          "max": 70,
+          "n": 8,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana"
+        },
+        "chedraui": {
+          "price": 40.95,
+          "min": 39,
+          "max": 42,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana"
+        }
+      },
+      "platano": {
+        "bodega_aurrera": {
+          "price": 19,
+          "min": 19,
+          "max": 19,
+          "n": 19,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón"
+        },
+        "la_comer": {
+          "price": 26.9,
+          "min": 26.9,
+          "max": 26.9,
+          "n": 7,
+          "date": "2026-07-13",
+          "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón"
+        },
+        "soriana": {
+          "price": 19.9,
+          "min": 15.8,
+          "max": 25.9,
+          "n": 46,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón"
+        },
+        "walmart_express": {
+          "price": 20,
+          "min": 20,
+          "max": 22,
+          "n": 24,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón"
+        },
+        "mercado_publico": {
+          "price": 22,
+          "min": 16,
+          "max": 30,
+          "n": 11,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón"
+        },
+        "walmart": {
+          "price": 20,
+          "min": 20,
+          "max": 26,
+          "n": 23,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón"
+        },
+        "chedraui": {
+          "price": 19,
+          "min": 18,
+          "max": 19,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón"
+        }
+      },
+      "naranja": {
+        "bodega_aurrera": {
+          "price": 40,
+          "min": 30,
+          "max": 40,
+          "n": 17,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Valencia"
+        },
+        "la_comer": {
+          "price": 38.9,
+          "min": 38.9,
+          "max": 39.9,
+          "n": 6,
+          "date": "2026-07-13",
+          "presentation": "1 Kg. Granel. Valencia"
+        },
+        "soriana": {
+          "price": 39.9,
+          "min": 34.8,
+          "max": 39.9,
+          "n": 5,
+          "date": "2026-07-14",
+          "presentation": "1 Kg. Granel. Valencia"
+        },
+        "walmart_express": {
+          "price": 42,
+          "min": 42,
+          "max": 42,
+          "n": 19,
+          "date": "2026-07-14",
+          "presentation": "1 Kg. Granel. Valencia"
+        },
+        "mercado_publico": {
+          "price": 25,
+          "min": 25,
+          "max": 25,
+          "n": 2,
+          "date": "2026-07-10",
+          "presentation": "1 Kg. Granel. Valencia"
+        },
+        "walmart": {
+          "price": 42,
+          "min": 42,
+          "max": 42,
+          "n": 11,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Valencia"
+        }
+      },
+      "mango": {
+        "bodega_aurrera": {
+          "price": 35,
+          "min": 28,
+          "max": 42,
+          "n": 16,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Ataulfo"
+        },
+        "la_comer": {
+          "price": 46.9,
+          "min": 45.9,
+          "max": 49.9,
+          "n": 7,
+          "date": "2026-07-13",
+          "presentation": "1 Kg. Granel. Ataulfo"
+        },
+        "soriana": {
+          "price": 42.9,
+          "min": 30.9,
+          "max": 42.9,
+          "n": 37,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Ataulfo"
+        },
+        "walmart_express": {
+          "price": 34,
+          "min": 26,
+          "max": 42,
+          "n": 25,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Ataulfo"
+        },
+        "mercado_publico": {
+          "price": 45,
+          "min": 25,
+          "max": 70,
+          "n": 10,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Ataulfo"
+        },
+        "walmart": {
+          "price": 42,
+          "min": 34,
+          "max": 42,
+          "n": 22,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Ataulfo"
+        },
+        "chedraui": {
+          "price": 43.45,
+          "min": 42,
+          "max": 45.8,
+          "n": 6,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Ataulfo"
+        }
+      },
+      "fresa": {
+        "la_comer": {
+          "price": 153.9647577092511,
+          "min": 109.91189427312774,
+          "max": 175.99118942731278,
+          "n": 6,
+          "date": "2026-07-13",
+          "presentation": "Paquete o Canastilla 454 Gr."
+        },
+        "soriana": {
+          "price": 178.19383259911893,
+          "min": 135.4625550660793,
+          "max": 184.80176211453744,
+          "n": 29,
+          "date": "2026-07-15",
+          "presentation": "Paquete o Canastilla 454 Gr."
+        },
+        "walmart_express": {
+          "price": 171.80616740088104,
+          "min": 118.94273127753303,
+          "max": 174.0088105726872,
+          "n": 16,
+          "date": "2026-07-15",
+          "presentation": "Paquete o Canastilla 454 Gr."
+        },
+        "walmart": {
+          "price": 171.80616740088104,
+          "min": 171.80616740088104,
+          "max": 174.0088105726872,
+          "n": 19,
+          "date": "2026-07-15",
+          "presentation": "Paquete o Canastilla 454 Gr."
+        },
+        "mercado_publico": {
+          "price": 176.21145374449338,
+          "min": 143.17180616740086,
+          "max": 176.21145374449338,
+          "n": 5,
+          "date": "2026-07-14",
+          "presentation": "Paquete o Canastilla 454 Gr."
+        },
+        "chedraui": {
+          "price": 151.98237885462552,
+          "min": 129.95594713656388,
+          "max": 164.7577092511013,
+          "n": 5,
+          "date": "2026-07-15",
+          "presentation": "Paquete o Canastilla 454 Gr."
+        },
+        "bodega_aurrera": {
+          "price": 127.75330396475769,
+          "min": 92.51101321585902,
+          "max": 162.99559471365637,
+          "n": 4,
+          "date": "2026-07-07",
+          "presentation": "Paquete o Canastilla 454 Gr."
+        }
+      },
+      "uva": {
+        "la_comer": {
+          "price": 110,
+          "min": 98.5,
+          "max": 129,
+          "n": 5,
+          "date": "2026-07-10",
+          "presentation": "1 Kg. Granel. Thompson. Blanca Sin Semilla"
+        },
+        "soriana": {
+          "price": 89.8,
+          "min": 59.8,
+          "max": 114.8,
+          "n": 53,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Thompson. Blanca Sin Semilla"
+        },
+        "mercado_publico": {
+          "price": 100,
+          "min": 70,
+          "max": 140,
+          "n": 9,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Thompson. Blanca Sin Semilla"
+        },
+        "walmart": {
+          "price": 89,
+          "min": 89,
+          "max": 94,
+          "n": 4,
+          "date": "2026-07-09",
+          "presentation": "1 Kg. Granel. Roja Sin Semilla"
+        },
+        "chedraui": {
+          "price": 99,
+          "min": 74.5,
+          "max": 110,
+          "n": 9,
+          "date": "2026-07-15",
+          "presentation": "1 Kg. Granel. Thompson. Blanca Sin Semilla"
+        },
+        "walmart_express": {
+          "price": 38,
+          "min": 38,
+          "max": 38,
+          "n": 1,
+          "date": "2026-07-02",
+          "presentation": "1 Kg. Granel. Roja Sin Semilla"
+        },
+        "bodega_aurrera": {
+          "price": 44,
+          "min": 44,
+          "max": 59,
+          "n": 3,
+          "date": "2026-07-09",
+          "presentation": "1 Kg. Granel. Roja Sin Semilla"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2891 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-18T00:05:52.604Z",
+  "sources": {
+    "sniim": {
+      "id": "sniim",
+      "name": "SNIIM · Central de Abasto de Iztapalapa",
+      "url": "https://www.economia-sniim.gob.mx/nuevo/Consultas/MercadosNacionales/PreciosDeMercado/Agricolas/ResultadosConsultaFechaFrutasYHortalizas.aspx",
+      "kind": "mayoreo",
+      "cadence": "diaria",
+      "dataDate": "2026-09-17",
+      "fetchedAt": "2026-09-17T23:58:49.466Z",
+      "status": "ok",
+      "error": null
+    },
+    "profeco": {
+      "id": "profeco",
+      "name": "PROFECO · Quién es Quién en los Precios",
+      "url": "https://datos.profeco.gob.mx/datos_abiertos/qqp.php",
+      "kind": "menudeo",
+      "cadence": "quincenal",
+      "period": "07-2026_Q2",
+      "previousPeriod": "07-2026_Q1",
+      "dataDate": "2026-07-31",
+      "dataDateFrom": "2026-07-16",
+      "fetchedAt": "2026-09-17T23:56:14.379Z",
+      "status": "ok",
+      "error": null
+    }
+  },
+  "locations": [
+    {
+      "id": "walmart_express",
+      "name": "Walmart Express",
+      "short": "W. Express",
+      "tag": "antes Superama",
+      "source": "profeco"
+    },
+    {
+      "id": "walmart",
+      "name": "Walmart",
+      "short": "Walmart",
+      "tag": "Cadena",
+      "source": "profeco"
+    },
+    {
+      "id": "bodega_aurrera",
+      "name": "Bodega Aurrera",
+      "short": "Aurrera",
+      "tag": "Cadena",
+      "source": "profeco"
+    },
+    {
+      "id": "soriana",
+      "name": "Soriana",
+      "short": "Soriana",
+      "tag": "Cadena",
+      "source": "profeco"
+    },
+    {
+      "id": "chedraui",
+      "name": "Chedraui",
+      "short": "Chedraui",
+      "tag": "Cadena",
+      "source": "profeco"
+    },
+    {
+      "id": "la_comer",
+      "name": "La Comer",
+      "short": "La Comer",
+      "tag": "Premium",
+      "source": "profeco"
+    },
+    {
+      "id": "mercado_publico",
+      "name": "Mercado Público",
+      "short": "Mercado",
+      "tag": "Menudeo",
+      "source": "profeco"
+    },
+    {
+      "id": "central_abastos",
+      "name": "Central de Abastos",
+      "short": "C. Abastos",
+      "tag": "Mayoreo",
+      "source": "sniim"
+    }
+  ],
+  "products": [
+    {
+      "id": "jitomate",
+      "name": "Jitomate",
+      "icon": "🍅",
+      "category": "verdura",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 16,
+        "walmart": 16,
+        "bodega_aurrera": 15,
+        "soriana": 19.9,
+        "chedraui": 17,
+        "la_comer": 25.4,
+        "mercado_publico": 25,
+        "central_abastos": 21.54
+      },
+      "prevPrices": {
+        "walmart_express": 21,
+        "walmart": 21,
+        "bodega_aurrera": 20,
+        "soriana": 21,
+        "chedraui": 14.5,
+        "la_comer": 26.9,
+        "mercado_publico": 22.5,
+        "central_abastos": 22.31
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 17.69
+        },
+        {
+          "date": "2026-09-04",
+          "price": 18.46
+        },
+        {
+          "date": "2026-09-07",
+          "price": 20
+        },
+        {
+          "date": "2026-09-08",
+          "price": 21.54
+        },
+        {
+          "date": "2026-09-09",
+          "price": 23.85
+        },
+        {
+          "date": "2026-09-10",
+          "price": 22.31
+        },
+        {
+          "date": "2026-09-11",
+          "price": 20.77
+        },
+        {
+          "date": "2026-09-14",
+          "price": 22.31
+        },
+        {
+          "date": "2026-09-15",
+          "price": 22.31
+        },
+        {
+          "date": "2026-09-17",
+          "price": 21.54
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje",
+          "min": 15,
+          "max": 22,
+          "n": 31
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje",
+          "min": 16,
+          "max": 21,
+          "n": 27
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje",
+          "min": 15,
+          "max": 25,
+          "n": 23
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje",
+          "min": 11.5,
+          "max": 34.9,
+          "n": 39
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje",
+          "min": 11.5,
+          "max": 19,
+          "n": 7
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje",
+          "min": 16.9,
+          "max": 25.9,
+          "n": 10
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Saladette/huaje o Tomate Saladette/huaje",
+          "min": 16,
+          "max": 40,
+          "n": 9
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Tomate Saladette",
+          "presentation": "Caja de 12 kg. / Caja de 13 kg. / Caja de 25 kg.",
+          "min": 17.2,
+          "max": 36.67,
+          "n": 3
+        }
+      }
+    },
+    {
+      "id": "cebolla",
+      "name": "Cebolla",
+      "icon": "🧅",
+      "category": "verdura",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 42,
+        "walmart": 42,
+        "bodega_aurrera": 42,
+        "soriana": 29.9,
+        "chedraui": 26.5,
+        "la_comer": 32.9,
+        "mercado_publico": 28,
+        "central_abastos": 40
+      },
+      "prevPrices": {
+        "walmart_express": 42,
+        "walmart": 42,
+        "bodega_aurrera": 42,
+        "soriana": 34.9,
+        "chedraui": 25.5,
+        "la_comer": 34.9,
+        "mercado_publico": 21,
+        "central_abastos": 40
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 29
+        },
+        {
+          "date": "2026-09-04",
+          "price": 30
+        },
+        {
+          "date": "2026-09-07",
+          "price": 32
+        },
+        {
+          "date": "2026-09-08",
+          "price": 32
+        },
+        {
+          "date": "2026-09-09",
+          "price": 36
+        },
+        {
+          "date": "2026-09-10",
+          "price": 36
+        },
+        {
+          "date": "2026-09-11",
+          "price": 41
+        },
+        {
+          "date": "2026-09-14",
+          "price": 40
+        },
+        {
+          "date": "2026-09-15",
+          "price": 40
+        },
+        {
+          "date": "2026-09-17",
+          "price": 40
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Blanca Sin Rabo",
+          "min": 42,
+          "max": 42,
+          "n": 29
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Blanca Sin Rabo",
+          "min": 34,
+          "max": 42,
+          "n": 25
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Blanca Sin Rabo",
+          "min": 20,
+          "max": 42,
+          "n": 22
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Blanca Sin Rabo",
+          "min": 21.8,
+          "max": 41.9,
+          "n": 39
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Blanca Sin Rabo",
+          "min": 16.9,
+          "max": 28,
+          "n": 6
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Blanca Sin Rabo",
+          "min": 30.9,
+          "max": 34.9,
+          "n": 10
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Blanca Sin Rabo",
+          "min": 18,
+          "max": 38,
+          "n": 9
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Cebolla Bola",
+          "presentation": "Arpilla de 30 kg.",
+          "min": 38,
+          "max": 49,
+          "n": 1
+        }
+      }
+    },
+    {
+      "id": "lechuga",
+      "name": "Lechuga",
+      "icon": "🥬",
+      "category": "verdura",
+      "unit": "pieza",
+      "prices": {
+        "walmart_express": 24.9,
+        "walmart": 24.9,
+        "bodega_aurrera": 22,
+        "soriana": 22.9,
+        "chedraui": 22,
+        "la_comer": 25.9,
+        "mercado_publico": 20,
+        "central_abastos": 10
+      },
+      "prevPrices": {
+        "walmart_express": 24.9,
+        "walmart": 24.9,
+        "bodega_aurrera": 22,
+        "soriana": 21.8,
+        "chedraui": 23,
+        "la_comer": 25.905,
+        "mercado_publico": 25,
+        "central_abastos": 10.83
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 7.5
+        },
+        {
+          "date": "2026-09-04",
+          "price": 6.67
+        },
+        {
+          "date": "2026-09-07",
+          "price": 7.5
+        },
+        {
+          "date": "2026-09-08",
+          "price": 8.33
+        },
+        {
+          "date": "2026-09-09",
+          "price": 8.33
+        },
+        {
+          "date": "2026-09-10",
+          "price": 7.5
+        },
+        {
+          "date": "2026-09-11",
+          "price": 7.5
+        },
+        {
+          "date": "2026-09-14",
+          "price": 10
+        },
+        {
+          "date": "2026-09-15",
+          "price": 10.83
+        },
+        {
+          "date": "2026-09-17",
+          "price": 10
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Pieza. Romana",
+          "min": 24,
+          "max": 24.9,
+          "n": 25
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "Pieza. Romana",
+          "min": 16,
+          "max": 25,
+          "n": 25
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Pieza. Romana",
+          "min": 22,
+          "max": 24.9,
+          "n": 19
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Pieza. Romana",
+          "min": 16.9,
+          "max": 25.9,
+          "n": 36
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "Pieza. Romana",
+          "min": 22,
+          "max": 22.5,
+          "n": 6
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Pieza. Romana",
+          "min": 22.9,
+          "max": 39.9,
+          "n": 7
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Pieza. Romana",
+          "min": 15,
+          "max": 25,
+          "n": 6
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Lechuga Romanita grande",
+          "presentation": "Docena",
+          "min": 8.33,
+          "max": 10.83,
+          "n": 1
+        }
+      }
+    },
+    {
+      "id": "papa",
+      "name": "Papa",
+      "icon": "🥔",
+      "category": "verdura",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 66,
+        "walmart": 66,
+        "bodega_aurrera": 65,
+        "soriana": 46.9,
+        "chedraui": 50,
+        "la_comer": 52.9,
+        "mercado_publico": 45,
+        "central_abastos": 15
+      },
+      "prevPrices": {
+        "walmart_express": 66,
+        "walmart": 66,
+        "bodega_aurrera": 65,
+        "soriana": 46.9,
+        "chedraui": 49,
+        "la_comer": 49.9,
+        "mercado_publico": 45,
+        "central_abastos": 17
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 17
+        },
+        {
+          "date": "2026-09-04",
+          "price": 17
+        },
+        {
+          "date": "2026-09-07",
+          "price": 17
+        },
+        {
+          "date": "2026-09-08",
+          "price": 18
+        },
+        {
+          "date": "2026-09-09",
+          "price": 17
+        },
+        {
+          "date": "2026-09-10",
+          "price": 17
+        },
+        {
+          "date": "2026-09-11",
+          "price": 17
+        },
+        {
+          "date": "2026-09-14",
+          "price": 17
+        },
+        {
+          "date": "2026-09-15",
+          "price": 17
+        },
+        {
+          "date": "2026-09-17",
+          "price": 15
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Alfa/blanca",
+          "min": 59,
+          "max": 66,
+          "n": 30
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Alfa/blanca",
+          "min": 59,
+          "max": 66,
+          "n": 22
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Alfa/blanca",
+          "min": 30,
+          "max": 65,
+          "n": 21
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Alfa/blanca",
+          "min": 39.8,
+          "max": 46.9,
+          "n": 38
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Alfa/blanca",
+          "min": 49,
+          "max": 52,
+          "n": 7
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Alfa/blanca",
+          "min": 50.9,
+          "max": 52.9,
+          "n": 10
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Alfa/blanca",
+          "min": 25,
+          "max": 60,
+          "n": 9
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Papa Alpha",
+          "presentation": "Arpilla de 50 kg.",
+          "min": 13,
+          "max": 16,
+          "n": 1
+        }
+      }
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro",
+      "icon": "🌿",
+      "category": "verdura",
+      "unit": "manojo",
+      "prices": {
+        "walmart_express": 10,
+        "walmart": 10,
+        "bodega_aurrera": 10,
+        "soriana": 9.9,
+        "chedraui": 9.5,
+        "la_comer": 10.9,
+        "mercado_publico": 5,
+        "central_abastos": null
+      },
+      "prevPrices": {
+        "walmart_express": 10.9,
+        "walmart": 10,
+        "bodega_aurrera": 9.9,
+        "soriana": 10.9,
+        "chedraui": 9.9,
+        "la_comer": 10.9,
+        "mercado_publico": 5,
+        "central_abastos": null
+      },
+      "history": [],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Manojo",
+          "min": 10,
+          "max": 12.9,
+          "n": 18
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "Manojo",
+          "min": 9,
+          "max": 14.9,
+          "n": 23
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Manojo",
+          "min": 7,
+          "max": 10.5,
+          "n": 22
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Manojo",
+          "min": 6.8,
+          "max": 13.5,
+          "n": 37
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "Manojo",
+          "min": 6.9,
+          "max": 9.9,
+          "n": 7
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Manojo",
+          "min": 10.9,
+          "max": 10.9,
+          "n": 7
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Manojo",
+          "min": 5,
+          "max": 15,
+          "n": 7
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "note": "no comparable en Central de Abastos"
+        }
+      }
+    },
+    {
+      "id": "chile_serrano",
+      "name": "Chile Serrano",
+      "icon": "🌶️",
+      "category": "verdura",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 59,
+        "walmart": 59,
+        "bodega_aurrera": 54,
+        "soriana": 52,
+        "chedraui": 44.5,
+        "la_comer": 49.9,
+        "mercado_publico": 45,
+        "central_abastos": 20
+      },
+      "prevPrices": {
+        "walmart_express": 59,
+        "walmart": 59,
+        "bodega_aurrera": 54,
+        "soriana": 52,
+        "chedraui": 39.9,
+        "la_comer": 39.9,
+        "mercado_publico": 42.5,
+        "central_abastos": 23
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 28
+        },
+        {
+          "date": "2026-09-04",
+          "price": 28
+        },
+        {
+          "date": "2026-09-07",
+          "price": 26
+        },
+        {
+          "date": "2026-09-08",
+          "price": 26
+        },
+        {
+          "date": "2026-09-09",
+          "price": 23
+        },
+        {
+          "date": "2026-09-10",
+          "price": 23
+        },
+        {
+          "date": "2026-09-11",
+          "price": 23
+        },
+        {
+          "date": "2026-09-14",
+          "price": 23
+        },
+        {
+          "date": "2026-09-15",
+          "price": 23
+        },
+        {
+          "date": "2026-09-17",
+          "price": 20
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Serrano",
+          "min": 59,
+          "max": 59,
+          "n": 26
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Serrano",
+          "min": 59,
+          "max": 59,
+          "n": 24
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Serrano",
+          "min": 54,
+          "max": 54,
+          "n": 19
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Serrano",
+          "min": 34.8,
+          "max": 66,
+          "n": 37
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Serrano",
+          "min": 39.9,
+          "max": 49.9,
+          "n": 7
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Serrano",
+          "min": 49.9,
+          "max": 59.9,
+          "n": 10
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Serrano",
+          "min": 30,
+          "max": 60,
+          "n": 9
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Chile Serrano",
+          "presentation": "Arpilla de 30 kg.",
+          "min": 16,
+          "max": 25,
+          "n": 1
+        }
+      }
+    },
+    {
+      "id": "chile_jalapeno",
+      "name": "Chile Jalapeño",
+      "icon": "🫑",
+      "category": "verdura",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 25,
+        "walmart": 25,
+        "bodega_aurrera": 20,
+        "soriana": 25.9,
+        "chedraui": 19,
+        "la_comer": null,
+        "mercado_publico": 35,
+        "central_abastos": 20
+      },
+      "prevPrices": {
+        "walmart_express": 25,
+        "walmart": 25,
+        "bodega_aurrera": 20,
+        "soriana": 28.8,
+        "chedraui": 17,
+        "la_comer": 5.7,
+        "mercado_publico": 40,
+        "central_abastos": 23
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 24
+        },
+        {
+          "date": "2026-09-04",
+          "price": 24
+        },
+        {
+          "date": "2026-09-07",
+          "price": 25
+        },
+        {
+          "date": "2026-09-08",
+          "price": 25
+        },
+        {
+          "date": "2026-09-09",
+          "price": 20
+        },
+        {
+          "date": "2026-09-10",
+          "price": 20
+        },
+        {
+          "date": "2026-09-11",
+          "price": 20
+        },
+        {
+          "date": "2026-09-14",
+          "price": 23
+        },
+        {
+          "date": "2026-09-15",
+          "price": 23
+        },
+        {
+          "date": "2026-09-17",
+          "price": 20
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño",
+          "min": 25,
+          "max": 25,
+          "n": 30
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño",
+          "min": 25,
+          "max": 25,
+          "n": 26
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño",
+          "min": 20,
+          "max": 25,
+          "n": 22
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño",
+          "min": 24.7,
+          "max": 29.9,
+          "n": 41
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño",
+          "min": 17,
+          "max": 19,
+          "n": 7
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño",
+          "min": 5.7,
+          "max": 5.7,
+          "n": 10,
+          "note": "descartado como atípico: $5.7 vs mediana $25 de otras 6 tiendas"
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Jalapeño o Cuaresmeño",
+          "min": 20,
+          "max": 60,
+          "n": 8
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Chile Jalapeño",
+          "presentation": "Arpilla de 30 kg.",
+          "min": 15,
+          "max": 25,
+          "n": 1
+        }
+      }
+    },
+    {
+      "id": "zanahoria",
+      "name": "Zanahoria",
+      "icon": "🥕",
+      "category": "verdura",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 18,
+        "walmart": 18,
+        "bodega_aurrera": 15.5,
+        "soriana": 16.9,
+        "chedraui": 15.5,
+        "la_comer": 18.9,
+        "mercado_publico": 20,
+        "central_abastos": 6.75
+      },
+      "prevPrices": {
+        "walmart_express": 18,
+        "walmart": 18,
+        "bodega_aurrera": 15.5,
+        "soriana": 17.2,
+        "chedraui": 16,
+        "la_comer": 16.9,
+        "mercado_publico": 20,
+        "central_abastos": 6.34
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 7.365
+        },
+        {
+          "date": "2026-09-04",
+          "price": 7.365
+        },
+        {
+          "date": "2026-09-07",
+          "price": 6.96
+        },
+        {
+          "date": "2026-09-08",
+          "price": 6.96
+        },
+        {
+          "date": "2026-09-09",
+          "price": 6.55
+        },
+        {
+          "date": "2026-09-10",
+          "price": 6.140000000000001
+        },
+        {
+          "date": "2026-09-11",
+          "price": 5.9350000000000005
+        },
+        {
+          "date": "2026-09-14",
+          "price": 6.55
+        },
+        {
+          "date": "2026-09-15",
+          "price": 6.34
+        },
+        {
+          "date": "2026-09-17",
+          "price": 6.75
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Mediana",
+          "min": 18,
+          "max": 18,
+          "n": 28
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Mediana",
+          "min": 14,
+          "max": 18,
+          "n": 26
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Mediana",
+          "min": 13,
+          "max": 15.5,
+          "n": 22
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Mediana",
+          "min": 12.8,
+          "max": 17.5,
+          "n": 40
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Mediana",
+          "min": 12.9,
+          "max": 16,
+          "n": 7
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Mediana",
+          "min": 18,
+          "max": 18.9,
+          "n": 10
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Mediana",
+          "min": 15,
+          "max": 25,
+          "n": 9
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Zanahoria mediana",
+          "presentation": "Arpilla de 24 kg. / Arpilla de 25 kg.",
+          "min": 5.6,
+          "max": 8.33,
+          "n": 2
+        }
+      }
+    },
+    {
+      "id": "pepino",
+      "name": "Pepino",
+      "icon": "🥒",
+      "category": "verdura",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 24,
+        "walmart": 24,
+        "bodega_aurrera": 22,
+        "soriana": 23.9,
+        "chedraui": 26,
+        "la_comer": 36.9,
+        "mercado_publico": 30,
+        "central_abastos": 10.91
+      },
+      "prevPrices": {
+        "walmart_express": 24,
+        "walmart": 24,
+        "bodega_aurrera": 22,
+        "soriana": 19.8,
+        "chedraui": 22.5,
+        "la_comer": 26.9,
+        "mercado_publico": 23.5,
+        "central_abastos": 11.82
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 16.36
+        },
+        {
+          "date": "2026-09-04",
+          "price": 16.36
+        },
+        {
+          "date": "2026-09-07",
+          "price": 15.91
+        },
+        {
+          "date": "2026-09-08",
+          "price": 15
+        },
+        {
+          "date": "2026-09-09",
+          "price": 15.91
+        },
+        {
+          "date": "2026-09-10",
+          "price": 15.91
+        },
+        {
+          "date": "2026-09-11",
+          "price": 15.45
+        },
+        {
+          "date": "2026-09-14",
+          "price": 11.82
+        },
+        {
+          "date": "2026-09-15",
+          "price": 11.82
+        },
+        {
+          "date": "2026-09-17",
+          "price": 10.91
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel",
+          "min": 18,
+          "max": 24,
+          "n": 28
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel",
+          "min": 24,
+          "max": 24,
+          "n": 24
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel",
+          "min": 20,
+          "max": 22,
+          "n": 21
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel",
+          "min": 19.8,
+          "max": 34.9,
+          "n": 35
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel",
+          "min": 22,
+          "max": 29,
+          "n": 7
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel",
+          "min": 34.9,
+          "max": 36.9,
+          "n": 10
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel",
+          "min": 20,
+          "max": 40,
+          "n": 8
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Pepino",
+          "presentation": "Caja de 22 kg.",
+          "min": 10,
+          "max": 12.73,
+          "n": 1
+        }
+      }
+    },
+    {
+      "id": "calabacita",
+      "name": "Calabacita",
+      "icon": "🟢",
+      "category": "verdura",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 36.9,
+        "walmart": 36.9,
+        "bodega_aurrera": 34.9,
+        "soriana": 36.9,
+        "chedraui": 32.5,
+        "la_comer": 34.9,
+        "mercado_publico": 25,
+        "central_abastos": 4.4
+      },
+      "prevPrices": {
+        "walmart_express": 36.9,
+        "walmart": 36.9,
+        "bodega_aurrera": 34.9,
+        "soriana": 36.9,
+        "chedraui": 33.45,
+        "la_comer": 38.9,
+        "mercado_publico": 27.5,
+        "central_abastos": 5.2
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 8
+        },
+        {
+          "date": "2026-09-04",
+          "price": 7.2
+        },
+        {
+          "date": "2026-09-07",
+          "price": 7.2
+        },
+        {
+          "date": "2026-09-08",
+          "price": 7.2
+        },
+        {
+          "date": "2026-09-09",
+          "price": 7.6
+        },
+        {
+          "date": "2026-09-10",
+          "price": 7.2
+        },
+        {
+          "date": "2026-09-11",
+          "price": 6.8
+        },
+        {
+          "date": "2026-09-14",
+          "price": 5.6
+        },
+        {
+          "date": "2026-09-15",
+          "price": 5.2
+        },
+        {
+          "date": "2026-09-17",
+          "price": 4.4
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)",
+          "min": 36.9,
+          "max": 36.9,
+          "n": 27
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)",
+          "min": 36.9,
+          "max": 39.5,
+          "n": 20
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)",
+          "min": 34.9,
+          "max": 34.9,
+          "n": 15
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)",
+          "min": 26.8,
+          "max": 39.9,
+          "n": 32
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)",
+          "min": 26.9,
+          "max": 34,
+          "n": 7
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)",
+          "min": 34.9,
+          "max": 39.9,
+          "n": 9
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Italiana/japonesa (Larga)",
+          "min": 20,
+          "max": 40,
+          "n": 9
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Calabacita Italiana",
+          "presentation": "Caja de 25 kg.",
+          "min": 4,
+          "max": 5.2,
+          "n": 1
+        }
+      }
+    },
+    {
+      "id": "brocoli",
+      "name": "Brócoli",
+      "icon": "🥦",
+      "category": "verdura",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 64,
+        "walmart": 64,
+        "bodega_aurrera": 62,
+        "soriana": 64,
+        "chedraui": 39.9,
+        "la_comer": 41.4,
+        "mercado_publico": 32.5,
+        "central_abastos": 17
+      },
+      "prevPrices": {
+        "walmart_express": 64,
+        "walmart": 64,
+        "bodega_aurrera": 62,
+        "soriana": 64,
+        "chedraui": 29.5,
+        "la_comer": 42.9,
+        "mercado_publico": 28,
+        "central_abastos": 17
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 15
+        },
+        {
+          "date": "2026-09-04",
+          "price": 14
+        },
+        {
+          "date": "2026-09-07",
+          "price": 16
+        },
+        {
+          "date": "2026-09-08",
+          "price": 15
+        },
+        {
+          "date": "2026-09-09",
+          "price": 16
+        },
+        {
+          "date": "2026-09-10",
+          "price": 16
+        },
+        {
+          "date": "2026-09-11",
+          "price": 17
+        },
+        {
+          "date": "2026-09-14",
+          "price": 18
+        },
+        {
+          "date": "2026-09-15",
+          "price": 17
+        },
+        {
+          "date": "2026-09-17",
+          "price": 17
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel",
+          "min": 40,
+          "max": 64,
+          "n": 29
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel",
+          "min": 40,
+          "max": 64,
+          "n": 26
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel",
+          "min": 40,
+          "max": 62,
+          "n": 20
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel",
+          "min": 38,
+          "max": 66,
+          "n": 32
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-29",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel",
+          "min": 29.5,
+          "max": 39.9,
+          "n": 6
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel",
+          "min": 38.9,
+          "max": 42.9,
+          "n": 8
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel",
+          "min": 25,
+          "max": 60,
+          "n": 8
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Brócoli",
+          "presentation": "Kilogramo",
+          "min": 16,
+          "max": 20,
+          "n": 1
+        }
+      }
+    },
+    {
+      "id": "elote",
+      "name": "Elote",
+      "icon": "🌽",
+      "category": "verdura",
+      "unit": "pieza",
+      "prices": {
+        "walmart_express": 15.9,
+        "walmart": 14.9,
+        "bodega_aurrera": 13.9,
+        "soriana": 13.9,
+        "chedraui": 8.5,
+        "la_comer": 10.9,
+        "mercado_publico": 15,
+        "central_abastos": 7.5
+      },
+      "prevPrices": {
+        "walmart_express": 15.9,
+        "walmart": 14.9,
+        "bodega_aurrera": 13.9,
+        "soriana": 14.9,
+        "chedraui": 10.65,
+        "la_comer": 10.9,
+        "mercado_publico": 14,
+        "central_abastos": 7.5
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 7.5
+        },
+        {
+          "date": "2026-09-04",
+          "price": 7.5
+        },
+        {
+          "date": "2026-09-07",
+          "price": 7.5
+        },
+        {
+          "date": "2026-09-08",
+          "price": 7.5
+        },
+        {
+          "date": "2026-09-09",
+          "price": 7.5
+        },
+        {
+          "date": "2026-09-10",
+          "price": 7.5
+        },
+        {
+          "date": "2026-09-11",
+          "price": 7.5
+        },
+        {
+          "date": "2026-09-14",
+          "price": 7.5
+        },
+        {
+          "date": "2026-09-15",
+          "price": 7.5
+        },
+        {
+          "date": "2026-09-17",
+          "price": 7.5
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Pieza",
+          "min": 15.9,
+          "max": 15.9,
+          "n": 21
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "Pieza",
+          "min": 14.5,
+          "max": 15.9,
+          "n": 18
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Pieza",
+          "min": 13.9,
+          "max": 13.9,
+          "n": 12
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Pieza",
+          "min": 11.8,
+          "max": 14.9,
+          "n": 32
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-29",
+          "period": "07-2026_Q2",
+          "presentation": "Pieza",
+          "min": 8.5,
+          "max": 12.9,
+          "n": 5
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Pieza",
+          "min": 10.9,
+          "max": 10.9,
+          "n": 7
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Pieza",
+          "min": 10,
+          "max": 15,
+          "n": 6
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Elote grande",
+          "presentation": "Docena",
+          "min": 6.67,
+          "max": 9.17,
+          "n": 1
+        }
+      }
+    },
+    {
+      "id": "aguacate",
+      "name": "Aguacate",
+      "icon": "🥑",
+      "category": "fruta",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 64,
+        "walmart": 62,
+        "bodega_aurrera": 59,
+        "soriana": 59.9,
+        "chedraui": 59,
+        "la_comer": 98.5,
+        "mercado_publico": 73,
+        "central_abastos": 38.89
+      },
+      "prevPrices": {
+        "walmart_express": 64,
+        "walmart": 62,
+        "bodega_aurrera": 59,
+        "soriana": 61.9,
+        "chedraui": 60.5,
+        "la_comer": 98.5,
+        "mercado_publico": 80,
+        "central_abastos": 37.78
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 38.89
+        },
+        {
+          "date": "2026-09-04",
+          "price": 40
+        },
+        {
+          "date": "2026-09-07",
+          "price": 38.89
+        },
+        {
+          "date": "2026-09-08",
+          "price": 40
+        },
+        {
+          "date": "2026-09-09",
+          "price": 38.89
+        },
+        {
+          "date": "2026-09-10",
+          "price": 37.78
+        },
+        {
+          "date": "2026-09-11",
+          "price": 36.67
+        },
+        {
+          "date": "2026-09-14",
+          "price": 37.78
+        },
+        {
+          "date": "2026-09-15",
+          "price": 37.78
+        },
+        {
+          "date": "2026-09-17",
+          "price": 38.89
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Hass",
+          "min": 64,
+          "max": 65,
+          "n": 31
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Hass",
+          "min": 62,
+          "max": 68,
+          "n": 24
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Hass",
+          "min": 59,
+          "max": 59,
+          "n": 21
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Hass",
+          "min": 42.8,
+          "max": 74.9,
+          "n": 39
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Hass",
+          "min": 39.5,
+          "max": 69,
+          "n": 7
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Hass",
+          "min": 79.9,
+          "max": 98.5,
+          "n": 8
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Hass",
+          "min": 60,
+          "max": 110,
+          "n": 8
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Aguacate Hass",
+          "presentation": "Caja de 9 kg.",
+          "min": 37.78,
+          "max": 41.11,
+          "n": 1
+        }
+      }
+    },
+    {
+      "id": "limon",
+      "name": "Limón",
+      "icon": "🍋",
+      "category": "fruta",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 40,
+        "walmart": 40,
+        "bodega_aurrera": 35,
+        "soriana": 32,
+        "chedraui": 35.45,
+        "la_comer": 49.9,
+        "mercado_publico": 30,
+        "central_abastos": 36.84
+      },
+      "prevPrices": {
+        "walmart_express": 40,
+        "walmart": 40,
+        "bodega_aurrera": 29,
+        "soriana": 32,
+        "chedraui": 34.9,
+        "la_comer": 45.9,
+        "mercado_publico": 40,
+        "central_abastos": 38.42
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 32.63
+        },
+        {
+          "date": "2026-09-04",
+          "price": 33.16
+        },
+        {
+          "date": "2026-09-07",
+          "price": 35.79
+        },
+        {
+          "date": "2026-09-08",
+          "price": 36.84
+        },
+        {
+          "date": "2026-09-09",
+          "price": 37.89
+        },
+        {
+          "date": "2026-09-10",
+          "price": 37.37
+        },
+        {
+          "date": "2026-09-11",
+          "price": 36.84
+        },
+        {
+          "date": "2026-09-14",
+          "price": 36.84
+        },
+        {
+          "date": "2026-09-15",
+          "price": 38.42
+        },
+        {
+          "date": "2026-09-17",
+          "price": 36.84
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Agrio con Semilla o Colima",
+          "min": 38,
+          "max": 40,
+          "n": 30
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Agrio con Semilla o Colima",
+          "min": 35,
+          "max": 42,
+          "n": 27
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Agrio con Semilla o Colima",
+          "min": 20,
+          "max": 40,
+          "n": 22
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Agrio con Semilla o Colima",
+          "min": 27.8,
+          "max": 39.9,
+          "n": 39
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Agrio con Semilla o Colima",
+          "min": 22,
+          "max": 39.9,
+          "n": 6
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Agrio con Semilla o Colima",
+          "min": 49.9,
+          "max": 49.9,
+          "n": 9
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Agrio con Semilla o Colima",
+          "min": 20,
+          "max": 50,
+          "n": 10
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Limón c/semilla # 3 / Limón c/semilla # 4 / Limón c/semilla # 5",
+          "presentation": "Arpilla de 19 kg. / Caja de 20 kg.",
+          "min": 14.74,
+          "max": 40,
+          "n": 3
+        }
+      }
+    },
+    {
+      "id": "manzana",
+      "name": "Manzana",
+      "icon": "🍎",
+      "category": "fruta",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 39,
+        "walmart": 39,
+        "bodega_aurrera": 38,
+        "soriana": 37.3,
+        "chedraui": 38,
+        "la_comer": 39.9,
+        "mercado_publico": 55,
+        "central_abastos": 43.375
+      },
+      "prevPrices": {
+        "walmart_express": 39,
+        "walmart": 39,
+        "bodega_aurrera": 38,
+        "soriana": 38.3,
+        "chedraui": 40.95,
+        "la_comer": 39.9,
+        "mercado_publico": 60,
+        "central_abastos": 43.375
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 42.26
+        },
+        {
+          "date": "2026-09-04",
+          "price": 42.26
+        },
+        {
+          "date": "2026-09-07",
+          "price": 42.26
+        },
+        {
+          "date": "2026-09-08",
+          "price": 42.26
+        },
+        {
+          "date": "2026-09-09",
+          "price": 42.26
+        },
+        {
+          "date": "2026-09-10",
+          "price": 42.26
+        },
+        {
+          "date": "2026-09-11",
+          "price": 42.26
+        },
+        {
+          "date": "2026-09-14",
+          "price": 43.375
+        },
+        {
+          "date": "2026-09-15",
+          "price": 43.375
+        },
+        {
+          "date": "2026-09-17",
+          "price": 43.375
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana",
+          "min": 34,
+          "max": 39,
+          "n": 31
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana",
+          "min": 30,
+          "max": 39,
+          "n": 27
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana",
+          "min": 38,
+          "max": 39,
+          "n": 23
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana",
+          "min": 29.8,
+          "max": 45.9,
+          "n": 40
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana",
+          "min": 34.5,
+          "max": 42,
+          "n": 7
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana",
+          "min": 39.9,
+          "max": 39.9,
+          "n": 10
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Red Delicious/roja/roja Mediana/roja Americana",
+          "min": 40,
+          "max": 65,
+          "n": 9
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Manzana Red Delicious",
+          "presentation": "Caja de 19 kg. / Caja de 17 kg.",
+          "min": 31.58,
+          "max": 55.88,
+          "n": 2
+        }
+      }
+    },
+    {
+      "id": "platano",
+      "name": "Plátano",
+      "icon": "🍌",
+      "category": "fruta",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 24,
+        "walmart": 24,
+        "bodega_aurrera": 23,
+        "soriana": 23.9,
+        "chedraui": 19,
+        "la_comer": 26.9,
+        "mercado_publico": 24,
+        "central_abastos": 6.39
+      },
+      "prevPrices": {
+        "walmart_express": 20,
+        "walmart": 20,
+        "bodega_aurrera": 19,
+        "soriana": 19.9,
+        "chedraui": 19,
+        "la_comer": 26.9,
+        "mercado_publico": 22,
+        "central_abastos": 7.220000000000001
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 10.83
+        },
+        {
+          "date": "2026-09-04",
+          "price": 10.83
+        },
+        {
+          "date": "2026-09-07",
+          "price": 9.445
+        },
+        {
+          "date": "2026-09-08",
+          "price": 9.165
+        },
+        {
+          "date": "2026-09-09",
+          "price": 8.335
+        },
+        {
+          "date": "2026-09-10",
+          "price": 7.775
+        },
+        {
+          "date": "2026-09-11",
+          "price": 7.775
+        },
+        {
+          "date": "2026-09-14",
+          "price": 7.220000000000001
+        },
+        {
+          "date": "2026-09-15",
+          "price": 7.220000000000001
+        },
+        {
+          "date": "2026-09-17",
+          "price": 6.39
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón",
+          "min": 20,
+          "max": 26,
+          "n": 30
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón",
+          "min": 20,
+          "max": 24,
+          "n": 24
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón",
+          "min": 10,
+          "max": 23,
+          "n": 21
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón",
+          "min": 9.8,
+          "max": 25.9,
+          "n": 39
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón",
+          "min": 16.5,
+          "max": 19,
+          "n": 7
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón",
+          "min": 25.9,
+          "max": 26.9,
+          "n": 10
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Tabasco/chiapas/roatán/portalimón",
+          "min": 17,
+          "max": 30,
+          "n": 9
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Plátano Chiapas / Plátano Tabasco",
+          "presentation": "Caja de 18 kg.",
+          "min": 5,
+          "max": 7.78,
+          "n": 2
+        }
+      }
+    },
+    {
+      "id": "naranja",
+      "name": "Naranja",
+      "icon": "🍊",
+      "category": "fruta",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 42,
+        "walmart": 42,
+        "bodega_aurrera": 40,
+        "soriana": 32.8,
+        "chedraui": null,
+        "la_comer": 39.9,
+        "mercado_publico": 25,
+        "central_abastos": 13.5
+      },
+      "prevPrices": {
+        "walmart_express": 42,
+        "walmart": 42,
+        "bodega_aurrera": 40,
+        "soriana": 39.9,
+        "chedraui": null,
+        "la_comer": 38.9,
+        "mercado_publico": 25,
+        "central_abastos": 14.5
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 16.5
+        },
+        {
+          "date": "2026-09-04",
+          "price": 16.5
+        },
+        {
+          "date": "2026-09-07",
+          "price": 16
+        },
+        {
+          "date": "2026-09-08",
+          "price": 15.5
+        },
+        {
+          "date": "2026-09-09",
+          "price": 15.5
+        },
+        {
+          "date": "2026-09-10",
+          "price": 15.5
+        },
+        {
+          "date": "2026-09-11",
+          "price": 15.5
+        },
+        {
+          "date": "2026-09-14",
+          "price": 15.2
+        },
+        {
+          "date": "2026-09-15",
+          "price": 14.5
+        },
+        {
+          "date": "2026-09-17",
+          "price": 13.5
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Valencia",
+          "min": 34,
+          "max": 42,
+          "n": 24
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Valencia",
+          "min": 29,
+          "max": 42,
+          "n": 12
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Valencia",
+          "min": 25,
+          "max": 40,
+          "n": 18
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-27",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Valencia",
+          "min": 32.8,
+          "max": 43.5,
+          "n": 3
+        },
+        "chedraui": {
+          "source": "profeco",
+          "note": "sin observaciones en el periodo"
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Valencia",
+          "min": 39.9,
+          "max": 41.9,
+          "n": 9
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Valencia",
+          "min": 25,
+          "max": 25,
+          "n": 2
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Naranja Valencia mediana",
+          "presentation": "Kilogramo",
+          "min": 13,
+          "max": 13.7,
+          "n": 1
+        }
+      }
+    },
+    {
+      "id": "mango",
+      "name": "Mango",
+      "icon": "🥭",
+      "category": "fruta",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 42,
+        "walmart": 42,
+        "bodega_aurrera": 40,
+        "soriana": 43.5,
+        "chedraui": 47.95,
+        "la_comer": 49.9,
+        "mercado_publico": 37.5,
+        "central_abastos": 42.86
+      },
+      "prevPrices": {
+        "walmart_express": 34,
+        "walmart": 42,
+        "bodega_aurrera": 35,
+        "soriana": 42.9,
+        "chedraui": 43.45,
+        "la_comer": 46.9,
+        "mercado_publico": 45,
+        "central_abastos": 42.86
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 57.14
+        },
+        {
+          "date": "2026-09-04",
+          "price": 57.14
+        },
+        {
+          "date": "2026-09-07",
+          "price": 57.14
+        },
+        {
+          "date": "2026-09-08",
+          "price": 57.14
+        },
+        {
+          "date": "2026-09-09",
+          "price": 57.14
+        },
+        {
+          "date": "2026-09-10",
+          "price": 50
+        },
+        {
+          "date": "2026-09-11",
+          "price": 46.43
+        },
+        {
+          "date": "2026-09-14",
+          "price": 42.86
+        },
+        {
+          "date": "2026-09-15",
+          "price": 42.86
+        },
+        {
+          "date": "2026-09-17",
+          "price": 42.86
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Ataulfo",
+          "min": 34,
+          "max": 45,
+          "n": 30
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Ataulfo",
+          "min": 30,
+          "max": 44,
+          "n": 22
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Ataulfo",
+          "min": 29,
+          "max": 42,
+          "n": 19
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Ataulfo",
+          "min": 34.9,
+          "max": 50.9,
+          "n": 34
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-29",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Ataulfo",
+          "min": 29.9,
+          "max": 49.9,
+          "n": 6
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Ataulfo",
+          "min": 49.9,
+          "max": 59.9,
+          "n": 5
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Ataulfo",
+          "min": 25,
+          "max": 50,
+          "n": 8
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Mango Ataulfo",
+          "presentation": "Caja de 28 kg.",
+          "min": 35.71,
+          "max": 46.43,
+          "n": 1
+        }
+      }
+    },
+    {
+      "id": "fresa",
+      "name": "Fresa",
+      "icon": "🍓",
+      "category": "fruta",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": 171.80616740088104,
+        "walmart": 171.80616740088104,
+        "bodega_aurrera": 162.99559471365637,
+        "soriana": 178.19383259911893,
+        "chedraui": 131.9383259911894,
+        "la_comer": 175.99118942731278,
+        "mercado_publico": 154.1850220264317,
+        "central_abastos": 41.25
+      },
+      "prevPrices": {
+        "walmart_express": 171.80616740088104,
+        "walmart": 171.80616740088104,
+        "bodega_aurrera": 127.75330396475769,
+        "soriana": 178.19383259911893,
+        "chedraui": 151.98237885462552,
+        "la_comer": 153.9647577092511,
+        "mercado_publico": 176.21145374449338,
+        "central_abastos": 50
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 50
+        },
+        {
+          "date": "2026-09-04",
+          "price": 48.75
+        },
+        {
+          "date": "2026-09-07",
+          "price": 47.5
+        },
+        {
+          "date": "2026-09-08",
+          "price": 48.75
+        },
+        {
+          "date": "2026-09-09",
+          "price": 55
+        },
+        {
+          "date": "2026-09-10",
+          "price": 56.25
+        },
+        {
+          "date": "2026-09-11",
+          "price": 57.5
+        },
+        {
+          "date": "2026-09-14",
+          "price": 52.5
+        },
+        {
+          "date": "2026-09-15",
+          "price": 50
+        },
+        {
+          "date": "2026-09-17",
+          "price": 41.25
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Paquete o Canastilla 454 Gr.",
+          "min": 171.80616740088104,
+          "max": 171.80616740088104,
+          "n": 26
+        },
+        "walmart": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "Paquete o Canastilla 454 Gr.",
+          "min": 171.80616740088104,
+          "max": 171.80616740088104,
+          "n": 19
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Paquete o Canastilla 454 Gr.",
+          "min": 92.51101321585902,
+          "max": 162.99559471365637,
+          "n": 12
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Paquete o Canastilla 454 Gr.",
+          "min": 109.69162995594712,
+          "max": 184.80176211453744,
+          "n": 20
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-29",
+          "period": "07-2026_Q2",
+          "presentation": "Paquete o Canastilla 454 Gr.",
+          "min": 131.9383259911894,
+          "max": 151.98237885462552,
+          "n": 3
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Paquete o Canastilla 454 Gr.",
+          "min": 151.98237885462552,
+          "max": 175.99118942731278,
+          "n": 6
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "Paquete o Canastilla 454 Gr.",
+          "min": 99.11894273127753,
+          "max": 154.1850220264317,
+          "n": 6
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Fresa",
+          "presentation": "Caja de 8 kg.",
+          "min": 37.5,
+          "max": 45,
+          "n": 1
+        }
+      }
+    },
+    {
+      "id": "uva",
+      "name": "Uva",
+      "icon": "🍇",
+      "category": "fruta",
+      "unit": "kg",
+      "prices": {
+        "walmart_express": null,
+        "walmart": null,
+        "bodega_aurrera": 69,
+        "soriana": 89.8,
+        "chedraui": 99.45,
+        "la_comer": 139,
+        "mercado_publico": 100,
+        "central_abastos": 75
+      },
+      "prevPrices": {
+        "walmart_express": 38,
+        "walmart": 89,
+        "bodega_aurrera": 44,
+        "soriana": 89.8,
+        "chedraui": 99,
+        "la_comer": 110,
+        "mercado_publico": 100,
+        "central_abastos": 75
+      },
+      "history": [
+        {
+          "date": "2026-09-03",
+          "price": 75
+        },
+        {
+          "date": "2026-09-04",
+          "price": 75
+        },
+        {
+          "date": "2026-09-07",
+          "price": 75
+        },
+        {
+          "date": "2026-09-08",
+          "price": 75
+        },
+        {
+          "date": "2026-09-09",
+          "price": 75
+        },
+        {
+          "date": "2026-09-10",
+          "price": 75
+        },
+        {
+          "date": "2026-09-11",
+          "price": 75
+        },
+        {
+          "date": "2026-09-14",
+          "price": 75
+        },
+        {
+          "date": "2026-09-15",
+          "price": 75
+        },
+        {
+          "date": "2026-09-17",
+          "price": 75
+        }
+      ],
+      "detail": {
+        "walmart_express": {
+          "source": "profeco",
+          "note": "sin observaciones en el periodo"
+        },
+        "walmart": {
+          "source": "profeco",
+          "note": "sin observaciones en el periodo"
+        },
+        "bodega_aurrera": {
+          "source": "profeco",
+          "date": "2026-07-30",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Roja Sin Semilla",
+          "min": 44,
+          "max": 97,
+          "n": 3
+        },
+        "soriana": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Thompson. Blanca Sin Semilla",
+          "min": 49.9,
+          "max": 125,
+          "n": 56
+        },
+        "chedraui": {
+          "source": "profeco",
+          "date": "2026-07-29",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Thompson. Blanca Sin Semilla",
+          "min": 69,
+          "max": 99.9,
+          "n": 8
+        },
+        "la_comer": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Thompson. Blanca Sin Semilla",
+          "min": 79.9,
+          "max": 149,
+          "n": 9
+        },
+        "mercado_publico": {
+          "source": "profeco",
+          "date": "2026-07-31",
+          "period": "07-2026_Q2",
+          "presentation": "1 Kg. Granel. Thompson. Blanca Sin Semilla",
+          "min": 75,
+          "max": 120,
+          "n": 8
+        },
+        "central_abastos": {
+          "source": "sniim",
+          "date": "2026-09-17",
+          "variety": "Uva sin semilla",
+          "presentation": "Caja de 8 kg.",
+          "min": 68.75,
+          "max": 81.25,
+          "n": 1
+        }
+      }
+    }
+  ]
+}
