@@ -10,27 +10,50 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
-import { formatMXN } from '../utils/format';
+import { formatMXN, formatDayMonthEsMX } from '../utils/format';
+
+function round2(n) {
+  return Math.round(n * 100) / 100;
+}
 
 export default function TrendChart({ products, selectedProduct }) {
   const data = useMemo(() => {
-    if (!products || products.length === 0) return [];
-    return products[0].history.map((h, i) => {
-      const indice =
-        Math.round(
-          (products.reduce((sum, p) => sum + p.history[i].avg, 0) / products.length) * 100
-        ) / 100;
+    const dates = new Set();
+    for (const product of products || []) {
+      for (const point of product.history || []) dates.add(point.date);
+    }
+    const sortedDates = [...dates].sort();
+
+    return sortedDates.map((date) => {
+      const values = (products || [])
+        .map((p) => p.history?.find((h) => h.date === date)?.price)
+        .filter((v) => typeof v === 'number');
+      const indice = values.length ? round2(values.reduce((sum, v) => sum + v, 0) / values.length) : null;
+      const productoPunto = selectedProduct?.history?.find((h) => h.date === date)?.price;
+
       return {
-        day: h.day,
+        date,
+        label: formatDayMonthEsMX(date),
         indice,
-        producto: selectedProduct ? selectedProduct.history[i].avg : undefined,
+        producto: typeof productoPunto === 'number' ? productoPunto : undefined,
       };
     });
   }, [products, selectedProduct]);
 
   const title = selectedProduct
-    ? `Tendencia de ${selectedProduct.name} vs indice de mercado (7 dias)`
-    : 'Indice de mercado — ultimos 7 dias';
+    ? `Central de Abastos (mayoreo) · últimos 14 días · ${selectedProduct.name}`
+    : 'Central de Abastos (mayoreo) · últimos 14 días';
+
+  if (!data.length) {
+    return (
+      <div className="glass-card rounded-2xl p-4 sm:p-6 shadow-lg shadow-black/20">
+        <h3 className="font-display text-sm sm:text-base text-slate-200 mb-4">{title}</h3>
+        <div className="flex items-center justify-center py-16 text-center">
+          <p className="text-slate-500 text-sm">Sin historial disponible todavía</p>
+        </div>
+      </div>
+    );
+  }
 
   const ChartWrapper = selectedProduct ? ComposedChart : AreaChart;
 
@@ -46,7 +69,7 @@ export default function TrendChart({ products, selectedProduct }) {
             </linearGradient>
           </defs>
           <CartesianGrid strokeDasharray="3 3" stroke="#1a2233" vertical={false} />
-          <XAxis dataKey="day" tick={{ fill: '#94a3b8', fontSize: 11 }} />
+          <XAxis dataKey="label" tick={{ fill: '#94a3b8', fontSize: 11 }} />
           <YAxis tick={{ fill: '#94a3b8', fontSize: 11 }} />
           <Tooltip
             contentStyle={{
@@ -57,7 +80,7 @@ export default function TrendChart({ products, selectedProduct }) {
             }}
             formatter={(value, name) => [
               formatMXN(value),
-              name === 'indice' ? 'Indice de mercado' : selectedProduct?.name || 'Producto',
+              name === 'indice' ? 'Índice de mercado' : selectedProduct?.name || 'Producto',
             ]}
           />
           <Area
@@ -68,6 +91,7 @@ export default function TrendChart({ products, selectedProduct }) {
             strokeWidth={2}
             isAnimationActive
             animationDuration={700}
+            connectNulls
           />
           {selectedProduct && (
             <Line

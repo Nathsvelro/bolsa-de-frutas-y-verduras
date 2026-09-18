@@ -1,5 +1,5 @@
 import { Search, Table2, LineChart as LineChartIcon } from 'lucide-react';
-import { CATEGORIES } from '../data/mockData';
+import { CATEGORIES } from '../data/priceUtils';
 
 const CATEGORY_OPTIONS = [
   { value: 'todos', label: 'Todos' },

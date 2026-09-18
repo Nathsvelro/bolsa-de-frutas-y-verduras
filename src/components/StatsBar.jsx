@@ -1,32 +1,39 @@
 import { motion } from 'framer-motion';
-import { BarChart3, PiggyBank, Activity, ListChecks } from 'lucide-react';
-import { getMarketStats } from '../data/mockData';
-import { formatMXN, formatPercent } from '../utils/format';
+import { BarChart3, PiggyBank, Activity, CalendarClock } from 'lucide-react';
+import { getMarketStats } from '../data/priceUtils';
+import { formatMXN, formatPercent, formatShortDateEsMX, formatDateRangeEsMX } from '../utils/format';
 
-export default function StatsBar({ products }) {
-  const stats = getMarketStats(products);
-  const moverIsUp = stats.biggestMover.changePct > 0;
-  const moverColorClass = moverIsUp ? 'text-bear-400' : 'text-bull-400';
+export default function StatsBar({ products, locations, sources }) {
+  const stats = getMarketStats(products, locations);
+  const moverHasChange = typeof stats.biggestMover?.changePct === 'number';
+  const moverIsUp = moverHasChange && stats.biggestMover.changePct > 0;
+  const moverColorClass = moverHasChange ? (moverIsUp ? 'text-bear-400' : 'text-bull-400') : 'text-slate-500';
+
+  const mayoreoDate = sources?.sniim?.dataDate ? formatShortDateEsMX(sources.sniim.dataDate) : null;
+  const menudeoRange =
+    sources?.profeco?.dataDateFrom && sources?.profeco?.dataDate
+      ? formatDateRangeEsMX(sources.profeco.dataDateFrom, sources.profeco.dataDate)
+      : null;
 
   const cards = [
     {
       key: 'avg',
-      label: 'Precio promedio',
+      label: 'Precio promedio (menudeo)',
       icon: BarChart3,
       iconClass: 'text-slate-400',
-      content: (
-        <span className="font-display text-xl sm:text-2xl text-white">
-          {formatMXN(stats.avgPrice)}
-          <span className="text-slate-400 text-sm font-sans"> /kg</span>
-        </span>
-      ),
+      content:
+        stats.avgPrice !== null ? (
+          <span className="font-display text-xl sm:text-2xl text-white">{formatMXN(stats.avgPrice)}</span>
+        ) : (
+          <span className="font-display text-xl sm:text-2xl text-slate-500">—</span>
+        ),
     },
     {
       key: 'savings',
       label: 'Ahorro maximo',
       icon: PiggyBank,
       iconClass: 'text-gold-400',
-      content: (
+      content: stats.maxSavings ? (
         <div className="flex flex-col">
           <span className="font-display text-xl sm:text-2xl text-gold-400">
             {formatMXN(stats.maxSavings.savingsAbs)}
@@ -35,33 +42,40 @@ export default function StatsBar({ products }) {
             en {stats.maxSavings.product.name}
           </span>
         </div>
+      ) : (
+        <span className="font-display text-xl sm:text-2xl text-slate-500">—</span>
       ),
     },
     {
       key: 'mover',
-      label: 'Mayor movimiento',
+      label: 'Mayor movimiento (mayoreo · día)',
       icon: Activity,
       iconClass: moverColorClass,
-      content: (
+      content: stats.biggestMover ? (
         <div className="flex flex-col">
           <span className="font-display text-xl sm:text-2xl text-white truncate">
             {stats.biggestMover.name}
           </span>
           <span className={`ticker-num text-sm ${moverColorClass}`}>
-            {formatPercent(stats.biggestMover.changePct)}
+            {moverHasChange ? formatPercent(stats.biggestMover.changePct) : 's/d'}
           </span>
         </div>
+      ) : (
+        <span className="font-display text-xl sm:text-2xl text-slate-500">—</span>
       ),
     },
     {
-      key: 'count',
-      label: 'Productos monitoreados',
-      icon: ListChecks,
+      key: 'updated',
+      label: 'Actualizado',
+      icon: CalendarClock,
       iconClass: 'text-slate-400',
       content: (
-        <span className="font-display text-xl sm:text-2xl text-white">
-          {products.length}
-        </span>
+        <div className="flex flex-col">
+          <span className="font-display text-xl sm:text-2xl text-white">{mayoreoDate || '—'}</span>
+          <span className="text-slate-400 text-xs truncate">
+            Menudeo: quincena {menudeoRange || 's/f'}
+          </span>
+        </div>
       ),
     },
   ];

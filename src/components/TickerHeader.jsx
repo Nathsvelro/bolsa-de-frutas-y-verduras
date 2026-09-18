@@ -1,12 +1,18 @@
 import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, Share2 } from 'lucide-react';
-import { formatMXN, formatPercent, formatRelativeTime, formatClock } from '../utils/format';
+import { formatMXN, formatPercent, formatShortDateEsMX, formatDateRangeEsMX } from '../utils/format';
 
-export default function TickerHeader({ products, updatedAt, isLive, onToggleLive, onShare }) {
+export default function TickerHeader({ products, sources, onShare }) {
   const [isPaused, setIsPaused] = useState(false);
 
   const tapeItems = useMemo(() => products.concat(products), [products]);
+
+  const mayoreoDate = sources?.sniim?.dataDate ? formatShortDateEsMX(sources.sniim.dataDate) : null;
+  const menudeoRange =
+    sources?.profeco?.dataDateFrom && sources?.profeco?.dataDate
+      ? formatDateRangeEsMX(sources.profeco.dataDateFrom, sources.profeco.dataDate)
+      : null;
 
   return (
     <motion.header
@@ -22,42 +28,28 @@ export default function TickerHeader({ products, updatedAt, isLive, onToggleLive
             <h1 className="truncate font-display text-sm font-bold leading-none tracking-tight sm:text-lg">
               BOLSA DE VERDURAS
             </h1>
-            <p className="mt-0.5 hidden text-xs text-slate-400 sm:block">
-              CDMX · Mercado en vivo
-            </p>
+            <p className="mt-0.5 hidden text-xs text-slate-400 sm:block">CDMX · Datos reales</p>
           </div>
         </div>
 
         <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
-          <motion.button
-            type="button"
-            onClick={onToggleLive}
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            className="flex items-center gap-1.5 rounded-full border border-white/5 bg-surface-800/70 px-2 py-1 transition-colors hover:border-white/10 sm:px-3 sm:py-1.5"
-          >
-            <span
-              className={
-                isLive
-                  ? 'h-2 w-2 rounded-full bg-bull-500 animate-pulse-live'
-                  : 'h-2 w-2 rounded-full bg-slate-500'
-              }
-            />
+          <div className="flex items-center gap-1.5 rounded-full border border-white/5 bg-surface-800/70 px-2 py-1 sm:px-3 sm:py-1.5">
+            <span className="h-2 w-2 rounded-full bg-bull-500" />
             <span className="text-[10px] font-semibold tracking-wide text-slate-200 sm:text-xs">
-              {isLive ? 'EN VIVO' : 'PAUSADO'}
+              DATOS REALES
             </span>
-          </motion.button>
-
-          <div className="hidden flex-col items-end leading-tight md:flex">
-            <span className="text-xs text-slate-400">
-              Actualizado {formatRelativeTime(updatedAt)}
-            </span>
-            <span className="ticker-num text-xs text-slate-500">{formatClock(updatedAt)}</span>
           </div>
 
-          <span className="ticker-num text-xs text-slate-400 md:hidden">
-            {formatClock(updatedAt)}
-          </span>
+          <div className="flex flex-col items-end leading-tight">
+            <span className="ticker-num text-[10px] text-slate-400 sm:text-xs">
+              Mayoreo · <span className="text-slate-300">{mayoreoDate || 's/f'}</span>
+            </span>
+            {menudeoRange && (
+              <span className="ticker-num hidden text-[10px] text-slate-400 sm:block sm:text-xs">
+                Menudeo · <span className="text-slate-300">{menudeoRange}</span>
+              </span>
+            )}
+          </div>
 
           <motion.button
             type="button"
@@ -82,9 +74,12 @@ export default function TickerHeader({ products, updatedAt, isLive, onToggleLive
           style={isPaused ? { animationPlayState: 'paused' } : undefined}
         >
           {tapeItems.map((product, idx) => {
-            const isUp = product.changePct > 0;
-            const isDown = product.changePct < 0;
-            const colorClass = isUp
+            const hasChange = typeof product.changePct === 'number';
+            const isUp = hasChange && product.changePct > 0;
+            const isDown = hasChange && product.changePct < 0;
+            const colorClass = !hasChange
+              ? 'text-slate-500'
+              : isUp
               ? 'text-bear-400'
               : isDown
               ? 'text-bull-400'
@@ -96,10 +91,13 @@ export default function TickerHeader({ products, updatedAt, isLive, onToggleLive
               >
                 <span className="text-base">{product.icon}</span>
                 <span className="font-medium text-slate-200">{product.name}</span>
-                <span className="ticker-num text-slate-300">{formatMXN(product.avgPrice)}</span>
+                <span className="ticker-num text-slate-300">
+                  {product.avgPrice !== null ? formatMXN(product.avgPrice) : '—'}
+                </span>
                 <span className={`ticker-num flex items-center gap-0.5 font-semibold ${colorClass}`}>
-                  {isUp ? <TrendingUp size={12} /> : isDown ? <TrendingDown size={12} /> : null}
-                  {formatPercent(product.changePct)}
+                  {hasChange && isUp ? <TrendingUp size={12} /> : null}
+                  {hasChange && isDown ? <TrendingDown size={12} /> : null}
+                  {hasChange ? formatPercent(product.changePct) : 's/d'}
                 </span>
               </div>
             );

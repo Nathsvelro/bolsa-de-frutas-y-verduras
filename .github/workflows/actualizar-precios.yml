@@ -1,0 +1,120 @@
+name: Actualizar precios
+
+# Ver docs/datos.md para el contrato completo del pipeline de datos.
+#
+# - Lunes a viernes (00:30 UTC de martes a sábado = 18:30 CDMX lunes a
+#   viernes, México no tiene horario de verano): actualiza SNIIM y reconstruye
+#   precios.json.
+# - Lunes 06:00 UTC: además descarga el ZIP completo de PROFECO (quincenal).
+# - workflow_dispatch permite forzar la descarga de PROFECO fuera de ese
+#   horario con el input `profeco`.
+on:
+  schedule:
+    - cron: '30 0 * * 2-6'
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+    inputs:
+      profeco:
+        description: 'Forzar la descarga completa de PROFECO (QQP)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+# Nunca corren dos actualizaciones a la vez, pero tampoco se cancela una en
+# curso: la siguiente espera en cola.
+concurrency:
+  group: actualizar-precios
+  cancel-in-progress: false
+
+jobs:
+  actualizar-precios:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      # Si los parsers están rotos no tiene sentido descargar ni commitear nada.
+      - name: Pruebas del pipeline
+        run: npm test
+
+      - name: Decidir si corresponde actualizar PROFECO
+        id: decidir_profeco
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_PROFECO: ${{ github.event.inputs.profeco }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] && [ "$INPUT_PROFECO" = "true" ]; then
+            echo "Se forzó PROFECO desde workflow_dispatch."
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          elif [ "$EVENT_SCHEDULE" = "0 6 * * 1" ]; then
+            echo "Corrida semanal de los lunes: toca PROFECO."
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Cada fetcher sigue aunque el otro (o él mismo) falle: si una fuente
+      # falla, su archivo previo en data/ NO se sobrescribe (ver fetch-*.mjs),
+      # y el job se marca como fallido al final para que el error sea
+      # visible — pero precios.json siempre se reconstruye con lo último
+      # válido que haya en data/.
+      - name: Datos SNIIM
+        id: sniim
+        continue-on-error: true
+        run: npm run datos:sniim
+
+      - name: Datos PROFECO
+        id: profeco
+        if: steps.decidir_profeco.outputs.run == 'true'
+        continue-on-error: true
+        run: npm run datos:profeco
+
+      - name: Reconstruir precios.json
+        id: build
+        if: always()
+        continue-on-error: true
+        run: npm run datos:build
+
+      - name: Commit y push si hay cambios
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git status --porcelain -- data public/data | grep -q .; then
+            MENSAJE=$(node -e '
+              const fs = require("node:fs");
+              let precios = {};
+              try {
+                precios = JSON.parse(fs.readFileSync("public/data/precios.json", "utf8"));
+              } catch {}
+              const sniimFecha = precios.sources?.sniim?.dataDate ?? "sin datos";
+              const profecoPeriodo = precios.sources?.profeco?.period ?? "sin datos";
+              console.log(`datos: SNIIM ${sniimFecha} · PROFECO ${profecoPeriodo}`);
+            ')
+            git add data public/data
+            git commit -m "$MENSAJE"
+            git pull --rebase origin "${{ github.ref_name }}"
+            git push origin "HEAD:${{ github.ref_name }}"
+          else
+            echo "Sin cambios en data/ ni public/data/; no se hace commit."
+          fi
+
+      - name: Fallar el job si algún paso de datos falló
+        if: steps.sniim.outcome == 'failure' || steps.profeco.outcome == 'failure' || steps.build.outcome == 'failure'
+        run: |
+          echo "::error::Uno o más pasos de datos fallaron (ver arriba). precios.json quedó con el último dato válido disponible."
+          exit 1

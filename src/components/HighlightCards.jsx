@@ -1,14 +1,29 @@
 import { motion } from 'framer-motion';
 import { TrendingDown, TrendingUp } from 'lucide-react';
-import { getBestLocation, getMarketStats } from '../data/mockData';
+import { getBestLocation, getMarketStats, getRetailLocations } from '../data/priceUtils';
 import { formatMXN, formatPercent } from '../utils/format';
 
-export default function HighlightCards({ products }) {
-  const stats = getMarketStats(products);
+export default function HighlightCards({ products, locations }) {
+  const stats = getMarketStats(products, locations);
+  const retailLocations = getRetailLocations(locations);
   const cheapest = stats.cheapest;
   const mostExpensive = stats.mostExpensive;
-  const cheapestLocation = getBestLocation(cheapest);
-  const mostExpensiveLocation = getBestLocation(mostExpensive);
+
+  if (!cheapest || !mostExpensive) {
+    return (
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="glass-card rounded-2xl p-6 text-center text-slate-500 text-sm">
+          Sin datos de menudeo suficientes todavía
+        </div>
+        <div className="glass-card rounded-2xl p-6 text-center text-slate-500 text-sm">
+          Sin datos de menudeo suficientes todavía
+        </div>
+      </div>
+    );
+  }
+
+  const cheapestLocation = getBestLocation(cheapest, retailLocations);
+  const mostExpensiveLocation = getBestLocation(mostExpensive, retailLocations);
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -37,14 +52,20 @@ export default function HighlightCards({ products }) {
           <div className="mt-4 flex items-center justify-between">
             <p className="text-xs text-slate-400">
               Mejor en{' '}
-              <span className="font-semibold text-slate-200">{cheapestLocation.name}</span>
+              <span className="font-semibold text-slate-200">
+                {cheapestLocation?.name || 'sin dato'}
+              </span>
             </p>
             <span
               className={`font-mono ticker-num text-sm font-semibold ${
-                cheapest.changePct > 0 ? 'text-bear-400' : 'text-bull-400'
+                typeof cheapest.changePct !== 'number'
+                  ? 'text-slate-500'
+                  : cheapest.changePct > 0
+                    ? 'text-bear-400'
+                    : 'text-bull-400'
               }`}
             >
-              {formatPercent(cheapest.changePct)}
+              {typeof cheapest.changePct === 'number' ? formatPercent(cheapest.changePct) : 's/d'}
             </span>
           </div>
         </div>
@@ -75,14 +96,20 @@ export default function HighlightCards({ products }) {
           <div className="mt-4 flex items-center justify-between">
             <p className="text-xs text-slate-400">
               Mejor en{' '}
-              <span className="font-semibold text-slate-200">{mostExpensiveLocation.name}</span>
+              <span className="font-semibold text-slate-200">
+                {mostExpensiveLocation?.name || 'sin dato'}
+              </span>
             </p>
             <span
               className={`font-mono ticker-num text-sm font-semibold ${
-                mostExpensive.changePct > 0 ? 'text-bear-400' : 'text-bull-400'
+                typeof mostExpensive.changePct !== 'number'
+                  ? 'text-slate-500'
+                  : mostExpensive.changePct > 0
+                    ? 'text-bear-400'
+                    : 'text-bull-400'
               }`}
             >
-              {formatPercent(mostExpensive.changePct)}
+              {typeof mostExpensive.changePct === 'number' ? formatPercent(mostExpensive.changePct) : 's/d'}
             </span>
           </div>
         </div>

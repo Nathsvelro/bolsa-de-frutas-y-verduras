@@ -1,8 +1,21 @@
-import { TrendingUp, TrendingDown, Minus, SearchX } from 'lucide-react';
-import { LOCATIONS, getBestLocation } from '../data/mockData';
-import { formatMXN, formatPercent } from '../utils/format';
+import { SearchX } from 'lucide-react';
+import { getBestLocation, getRetailLocations, formatUnit } from '../data/priceUtils';
+import { formatMXN, formatPercent, formatShortDateEsMX } from '../utils/format';
 
-export default function PriceTable({ products, onSelectProduct, selectedProductId }) {
+function cellTitle(detail) {
+  if (!detail) return undefined;
+  const parts = [];
+  if (detail.date) parts.push(formatShortDateEsMX(detail.date));
+  if (typeof detail.n === 'number') parts.push(`${detail.n} obs.`);
+  if (detail.presentation) parts.push(detail.presentation);
+  if (detail.variety) parts.push(detail.variety);
+  if (!parts.length && detail.note) parts.push(detail.note);
+  return parts.join(' · ') || undefined;
+}
+
+export default function PriceTable({ products, locations, onSelectProduct, selectedProductId }) {
+  const retailLocations = getRetailLocations(locations);
+
   if (!products.length) {
     return (
       <div className="glass-card rounded-2xl overflow-hidden">
@@ -23,16 +36,16 @@ export default function PriceTable({ products, onSelectProduct, selectedProductI
               <th className="sticky left-0 z-20 bg-surface-850/95 backdrop-blur px-3 py-2.5 text-left text-xs font-semibold uppercase tracking-wide text-slate-400">
                 Producto
               </th>
-              {LOCATIONS.map((loc) => (
+              {locations.map((loc) => (
                 <th
                   key={loc.id}
                   className="px-2 sm:px-3 py-2.5 text-center text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-slate-400 whitespace-nowrap"
                 >
-                  <span
-                    title={loc.name}
-                    className="block truncate max-w-[44px] sm:max-w-none mx-auto"
-                  >
+                  <span title={loc.name} className="hidden sm:block truncate mx-auto">
                     {loc.name}
+                  </span>
+                  <span title={loc.name} className="block sm:hidden truncate mx-auto">
+                    {loc.short}
                   </span>
                   <span className="block text-[9px] sm:text-[10px] font-normal normal-case text-slate-600">
                     {loc.tag}
@@ -40,61 +53,63 @@ export default function PriceTable({ products, onSelectProduct, selectedProductI
                 </th>
               ))}
               <th className="px-2 sm:px-3 py-2.5 text-center text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-slate-400 whitespace-nowrap">
-                Variacion
-              </th>
-              <th className="px-2 sm:px-3 py-2.5 text-center text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-slate-400 whitespace-nowrap">
-                Tendencia
-              </th>
-              <th className="px-2 sm:px-3 py-2.5 text-center text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-slate-400 whitespace-nowrap">
-                Mejor precio
+                Var. mayoreo
+                <span className="block text-[9px] sm:text-[10px] font-normal normal-case text-slate-600">
+                  día
+                </span>
               </th>
             </tr>
           </thead>
           <tbody>
             {products.map((product) => {
-                const best = getBestLocation(product);
-                const isSelected = product.id === selectedProductId;
-                const isUp = product.changePct > 0;
-                const isDown = product.changePct < 0;
-                const flashClass =
-                  product.flash === 'up'
-                    ? 'animate-flash-up'
-                    : product.flash === 'down'
-                      ? 'animate-flash-down'
-                      : '';
+              const best = getBestLocation(product, retailLocations);
+              const hasChange = typeof product.changePct === 'number';
+              const isUp = hasChange && product.changePct > 0;
+              const isDown = hasChange && product.changePct < 0;
+              const isSelected = product.id === selectedProductId;
+              const flashClass =
+                product.flash === 'up'
+                  ? 'animate-flash-up'
+                  : product.flash === 'down'
+                    ? 'animate-flash-down'
+                    : '';
 
-                return (
-                  <tr
-                    key={product.id}
-                    onClick={() => onSelectProduct(product.id)}
-                    className={`cursor-pointer border-b border-white/5 transition-colors hover:bg-surface-800/60 ${flashClass} ${
-                      isSelected
-                        ? 'bg-surface-800 border-l-2 border-bull-400'
-                        : 'border-l-2 border-transparent'
+              return (
+                <tr
+                  key={product.id}
+                  onClick={() => onSelectProduct(product.id)}
+                  className={`cursor-pointer border-b border-white/5 transition-colors hover:bg-surface-800/60 ${flashClass} ${
+                    isSelected
+                      ? 'bg-surface-800 border-l-2 border-bull-400'
+                      : 'border-l-2 border-transparent'
+                  }`}
+                >
+                  <td
+                    className={`sticky left-0 z-10 px-3 py-2 backdrop-blur ${
+                      isSelected ? 'bg-surface-800' : 'bg-surface-850/95'
                     }`}
                   >
-                    <td
-                      className={`sticky left-0 z-10 px-3 py-2 backdrop-blur ${
-                        isSelected ? 'bg-surface-800' : 'bg-surface-850/95'
-                      }`}
-                    >
-                      <div className="flex items-center gap-2">
-                        <span className="text-lg sm:text-xl">{product.icon}</span>
-                        <div className="flex flex-col leading-tight">
-                          <span className="font-display text-sm font-medium text-white whitespace-nowrap">
-                            {product.name}
-                          </span>
-                          <span className="text-[10px] text-slate-500">/{product.unit}</span>
-                        </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg sm:text-xl">{product.icon}</span>
+                      <div className="flex flex-col leading-tight">
+                        <span className="font-display text-sm font-medium text-white whitespace-nowrap">
+                          {product.name}
+                        </span>
+                        <span className="text-[10px] text-slate-500">{formatUnit(product.unit)}</span>
                       </div>
-                    </td>
-                    {LOCATIONS.map((loc) => {
-                      const isBest = loc.id === best.id;
-                      return (
-                        <td
-                          key={loc.id}
-                          className="px-2 sm:px-3 py-2 text-center whitespace-nowrap"
-                        >
+                    </div>
+                  </td>
+                  {locations.map((loc) => {
+                    const price = product.prices[loc.id];
+                    const hasPrice = typeof price === 'number';
+                    const isBest = hasPrice && best?.id === loc.id;
+                    return (
+                      <td
+                        key={loc.id}
+                        title={cellTitle(product.detail?.[loc.id])}
+                        className="px-2 sm:px-3 py-2 text-center whitespace-nowrap"
+                      >
+                        {hasPrice ? (
                           <span
                             className={`ticker-num inline-block px-2 py-0.5 ${
                               isBest
@@ -102,12 +117,16 @@ export default function PriceTable({ products, onSelectProduct, selectedProductI
                                 : 'text-slate-300'
                             }`}
                           >
-                            {formatMXN(product.prices[loc.id])}
+                            {formatMXN(price)}
                           </span>
-                        </td>
-                      );
-                    })}
-                    <td className="px-2 sm:px-3 py-2 text-center whitespace-nowrap">
+                        ) : (
+                          <span className="ticker-num inline-block px-2 py-0.5 text-slate-600">—</span>
+                        )}
+                      </td>
+                    );
+                  })}
+                  <td className="px-2 sm:px-3 py-2 text-center whitespace-nowrap">
+                    {hasChange ? (
                       <span
                         className={`ticker-num inline-flex items-center gap-1 font-semibold ${
                           isUp ? 'text-bear-400' : isDown ? 'text-bull-400' : 'text-slate-400'
@@ -116,22 +135,12 @@ export default function PriceTable({ products, onSelectProduct, selectedProductI
                         {isUp ? '↑' : isDown ? '↓' : '—'}
                         {formatPercent(product.changePct)}
                       </span>
-                    </td>
-                    <td className="px-2 sm:px-3 py-2 text-center">
-                      {isUp && <TrendingUp className="mx-auto h-4 w-4 text-bear-400" />}
-                      {isDown && <TrendingDown className="mx-auto h-4 w-4 text-bull-400" />}
-                      {!isUp && !isDown && <Minus className="mx-auto h-4 w-4 text-slate-500" />}
-                    </td>
-                    <td className="px-2 sm:px-3 py-2 text-center whitespace-nowrap">
-                      <span className="ticker-num inline-flex items-center gap-1 rounded-full border border-gold-500/30 bg-gold-500/10 px-2 py-0.5 text-[10px] sm:text-xs text-gold-300">
-                        {formatMXN(product.prices[best.id])}
-                        <span className="hidden sm:inline text-gold-400/80 truncate max-w-[90px]">
-                          {best.name}
-                        </span>
-                      </span>
-                    </td>
-                  </tr>
-                );
+                    ) : (
+                      <span className="ticker-num text-slate-600">s/d</span>
+                    )}
+                  </td>
+                </tr>
+              );
             })}
           </tbody>
         </table>

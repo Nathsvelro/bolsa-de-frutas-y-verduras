@@ -7,7 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "datos:sniim": "node scripts/fetch-sniim.mjs",
+    "datos:profeco": "node scripts/fetch-profeco.mjs",
+    "datos:build": "node scripts/build-precios.mjs",
+    "datos": "npm run datos:sniim && npm run datos:profeco && npm run datos:build",
+    "test": "node --test scripts/*.test.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",

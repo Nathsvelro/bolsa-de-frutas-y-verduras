@@ -1,10 +1,24 @@
 import { motion } from 'framer-motion';
 import { PiggyBank } from 'lucide-react';
-import { getSavingsOpportunities } from '../data/mockData';
+import { getSavingsOpportunities } from '../data/priceUtils';
 import { formatMXN, formatPercent } from '../utils/format';
 
-export default function SavingsOpportunities({ products }) {
-  const opportunities = getSavingsOpportunities(products).slice(0, 5);
+export default function SavingsOpportunities({ products, locations }) {
+  const opportunities = getSavingsOpportunities(products, locations).slice(0, 5);
+
+  if (!opportunities.length) {
+    return (
+      <div className="glass-card rounded-2xl p-4 sm:p-6 shadow-lg shadow-black/20">
+        <div className="flex items-center gap-2 mb-1">
+          <PiggyBank className="w-5 h-5 text-gold-400" />
+          <h2 className="font-display text-lg sm:text-xl text-white">
+            Oportunidades de ahorro
+          </h2>
+        </div>
+        <p className="text-slate-500 text-sm mt-4 text-center">Sin datos suficientes todavía</p>
+      </div>
+    );
+  }
 
   return (
     <div className="glass-card rounded-2xl p-4 sm:p-6 shadow-lg shadow-black/20">
