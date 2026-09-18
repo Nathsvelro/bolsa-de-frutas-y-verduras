@@ -25,7 +25,7 @@ npm run datos:noticias  # RSS de Google Noticias -> public/data/noticias.json (N
 npm test              # node --test scripts/*.test.mjs (pipeline y utilidades de noticias, sin red)
 ```
 
-Despliegue: el repo está en GitHub (`Nathsvelro/bolsa-de-verduras`) pensado para Vercel, que detecta Vite sin configuración extra. Un workflow de GitHub Actions (`.github/workflows/actualizar-precios.yml`) corre el pipeline y hace commit de los datos nuevos.
+Despliegue: el repo está en GitHub (`Nathsvelro/bolsa-de-frutas-y-verduras`) pensado para Vercel, que detecta Vite sin configuración extra. Un workflow de GitHub Actions (`.github/workflows/actualizar-precios.yml`) corre el pipeline y hace commit de los datos nuevos.
 
 ## Arquitectura
 
