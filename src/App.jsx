@@ -152,7 +152,7 @@ export default function App() {
 
   const handleShare = useCallback(async () => {
     const top = marketStats.opportunities[0];
-    const lines = ["📊 Bolsa de Verduras · CDMX"];
+    const lines = ["📊 Bolsa de Frutas y Verduras · CDMX"];
 
     if (marketStats.avgPrice !== null) {
       lines.push(`Precio promedio del mercado (menudeo): ${formatMXN(marketStats.avgPrice)}`);
@@ -177,7 +177,7 @@ export default function App() {
 
     try {
       if (navigator.share) {
-        await navigator.share({ title: "Bolsa de Verduras", text });
+        await navigator.share({ title: "Bolsa de Frutas y Verduras", text });
       } else {
         await navigator.clipboard.writeText(text);
         setShareFeedback("Comparación copiada al portapapeles");

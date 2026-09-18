@@ -25,8 +25,8 @@ export default function TickerHeader({ products, sources, onShare }) {
         <div className="flex min-w-0 items-center gap-2">
           <TrendingUp className="shrink-0 text-bull-400" size={22} />
           <div className="min-w-0">
-            <h1 className="truncate font-display text-sm font-bold leading-none tracking-tight sm:text-lg">
-              BOLSA DE VERDURAS
+            <h1 className="font-display text-sm font-bold leading-tight tracking-tight sm:truncate sm:text-lg sm:leading-none">
+              BOLSA DE FRUTAS Y VERDURAS
             </h1>
             <p className="mt-0.5 hidden text-xs text-slate-400 sm:block">CDMX · Datos reales</p>
           </div>

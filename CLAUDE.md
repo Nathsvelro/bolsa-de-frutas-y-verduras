@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Proyecto
 
-"Bolsa de Verduras": dashboard tipo bolsa de valores que compara precios de frutas y verduras en 8 puntos de venta de la Ciudad de México (7 de menudeo + Central de Abastos al mayoreo). SPA en React 19 + Vite 8, sin backend propio. Toda la UI y los comentarios están en español (es-MX); los precios se formatean como MXN.
+"Bolsa de Frutas y Verduras": dashboard tipo bolsa de valores que compara precios de frutas y verduras en 8 puntos de venta de la Ciudad de México (7 de menudeo + Central de Abastos al mayoreo). SPA en React 19 + Vite 8, sin backend propio. Toda la UI y los comentarios están en español (es-MX); los precios se formatean como MXN.
 
 Los precios son **reales**: un pipeline en `scripts/` (ver `docs/datos.md`) descarga SNIIM (mayoreo) y PROFECO "Quién es Quién en los Precios" (menudeo), y genera `public/data/precios.json`. La sección "Noticias y contexto" lee aparte `public/data/noticias.json` (titulares RSS de Google Noticias clasificados por factor; ver `docs/noticias.md`). La app solo lee esos dos JSON estáticos.
 
