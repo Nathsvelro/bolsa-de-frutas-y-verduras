@@ -7,7 +7,7 @@ Hecho con React 19, Vite 8, Tailwind CSS v4, Recharts y Framer Motion. Sin backe
 ## Qué muestra
 
 - **Tabla comparativa** de 20 productos × 8 lugares con el mejor precio de menudeo destacado, la unidad real de cada producto (kg, pieza o manojo) y un tooltip por celda con la fecha del dato, el número de observaciones y la presentación.
-- **Variación diaria** (flechas, ticker y notificaciones de cambios fuertes) calculada sobre el mayoreo, que es la única serie que se mueve cada día.
+- **Variación diaria** (flechas y ticker) calculada sobre el mayoreo, que es la única serie que se mueve cada día.
 - **Tendencia de 14 días** del índice de mercado y del producto seleccionado, **gráfica de precio por lugar** y **mapa de calor**.
 - **Estadísticas rápidas** (precio promedio de menudeo, ahorro máximo, mayor movimiento, fecha de actualización), tarjetas de más barato / más caro y **oportunidades de ahorro** entre tiendas.
 - **Buscador**, filtro frutas/verduras, orden por precio o variación, vista tabla/gráfico y botón de compartir.
@@ -92,7 +92,7 @@ public/data/        precios.json y noticias.json, lo único que lee la app
 src/hooks/          usePriceData, useNewsData
 src/data/           priceUtils, newsUtils (helpers puros y null-safe)
 src/components/     TickerHeader, StatsBar, HighlightCards, PriceTable, PriceLineChart,
-                    TrendChart, PriceHeatmap, SavingsOpportunities, PriceNotifications, NewsRadar
+                    TrendChart, PriceHeatmap, SavingsOpportunities, NewsRadar
 docs/               contratos y decisiones: datos.md, noticias.md
 ```
 

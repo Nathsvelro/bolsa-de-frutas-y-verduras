@@ -58,7 +58,7 @@ Cualquier lugar del catálogo puede venir en `null` (sin dato comparable o sin o
 
 ### Convención de colores (no intuitiva)
 
-Los tokens se llaman como en bolsa (`bull-*` verde, `bear-*` rojo) pero la semántica está **invertida respecto a una bolsa real**: una **subida** de precio se pinta en rojo (`bear`) y una **bajada** en verde (`bull`), porque para el comprador lo bueno es que baje. `gold-*` marca el mejor precio. Esta regla se repite en `TickerHeader`, `PriceTable`, `StatsBar`, `HighlightCards` y `PriceNotifications`; mantenerla al agregar componentes.
+Los tokens se llaman como en bolsa (`bull-*` verde, `bear-*` rojo) pero la semántica está **invertida respecto a una bolsa real**: una **subida** de precio se pinta en rojo (`bear`) y una **bajada** en verde (`bull`), porque para el comprador lo bueno es que baje. `gold-*` marca el mejor precio. Esta regla se repite en `TickerHeader`, `PriceTable`, `StatsBar` y `HighlightCards`; mantenerla al agregar componentes.
 
 ### Estilos
 

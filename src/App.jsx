@@ -1,11 +1,10 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { AlertTriangle, ArrowRight, BarChart3, Newspaper, Radio, RefreshCw } from "lucide-react";
 import { usePriceData } from "./hooks/usePriceData";
 import { getMarketStats } from "./data/priceUtils";
 import { formatMXN, formatPercent, formatShortDateEsMX, formatDateRangeEsMX } from "./utils/format";
 
 import TickerHeader from "./components/TickerHeader";
-import PriceNotifications from "./components/PriceNotifications";
 import StatsBar from "./components/StatsBar";
 import HighlightCards from "./components/HighlightCards";
 import SearchFilterBar from "./components/SearchFilterBar";
@@ -15,9 +14,6 @@ import PriceHeatmap from "./components/PriceHeatmap";
 import TrendChart from "./components/TrendChart";
 import SavingsOpportunities from "./components/SavingsOpportunities";
 import NewsRadar from "./components/NewsRadar";
-
-const NOTIFICATION_THRESHOLD = 4.5;
-const MAX_NOTIFICATIONS = 4;
 
 function normalize(str) {
   return str
@@ -114,38 +110,8 @@ export default function App() {
   const [view, setView] = useState("tabla");
   const [selectedProductId, setSelectedProductId] = useState(null);
   const [shareFeedback, setShareFeedback] = useState("");
-  const [notifications, setNotifications] = useState([]);
-  const notifiedRef = useRef(false);
 
   const marketStats = useMemo(() => getMarketStats(products, locations), [products, locations]);
-
-  // Notificaciones de cambios importantes en mayoreo, generadas una sola vez
-  // cuando los datos terminan de cargar.
-  useEffect(() => {
-    if (notifiedRef.current || loading || error || !products.length) return;
-    notifiedRef.current = true;
-
-    const now = Date.now();
-    const relevant = products
-      .filter((p) => typeof p.changePct === "number" && Math.abs(p.changePct) >= NOTIFICATION_THRESHOLD)
-      .sort((a, b) => Math.abs(b.changePct) - Math.abs(a.changePct))
-      .slice(0, MAX_NOTIFICATIONS)
-      .map((p) => ({
-        id: `${p.id}-${now}`,
-        productId: p.id,
-        name: p.name,
-        icon: p.icon,
-        changePct: p.changePct,
-        direction: p.changePct > 0 ? "up" : "down",
-        timestamp: now,
-      }));
-
-    if (relevant.length) setNotifications(relevant);
-  }, [products, loading, error]);
-
-  const dismissNotification = useCallback((id) => {
-    setNotifications((prev) => prev.filter((n) => n.id !== id));
-  }, []);
 
   const filtered = useMemo(() => {
     const term = normalize(search.trim());
@@ -225,7 +191,6 @@ export default function App() {
   return (
     <div className="min-h-screen pb-16">
       <TickerHeader products={products} sources={sources} onShare={handleShare} />
-      <PriceNotifications notifications={notifications} onDismiss={dismissNotification} />
 
       <main className="max-w-7xl mx-auto px-3 sm:px-6 py-6 space-y-6">
         <nav aria-label="Secciones del tablero" className="flex items-center justify-between gap-3 border-b border-white/[0.06] pb-4">
